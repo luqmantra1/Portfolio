@@ -1,0 +1,248 @@
+.experience {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience-item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 2px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.experience-item:last-child {
+  border-left: none;
+  padding-bottom: 0;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: 2px solid var(--bg-primary);
+}
+
+.experience-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.experience-title-section {
+  flex: 1;
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.experience-company {
+  font-size: 1rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.meta-item svg {
+  font-size: 0.85rem;
+  color: var(--accent-secondary);
+}
+
+.experience-type {
+  background: rgba(255, 107, 53, 0.2);
+  color: var(--accent-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.experience-achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.experience-achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.experience-achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .experience-list {
+    gap: 2rem;
+  }
+
+  .experience-item {
+    padding-left: 2.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .experience {
+    padding: 0;
+  }
+
+  .experience-list {
+    gap: 1.5rem;
+  }
+
+  .experience-item {
+    padding-left: 1.75rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .experience-item::before {
+    left: -5px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .experience-header {
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .experience-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .experience-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .experience-company {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .experience-meta {
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .meta-item {
+    font-size: 0.85rem;
+  }
+
+  .experience-achievements {
+    margin-top: 0.75rem;
+  }
+
+  .experience-achievements li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .experience-list {
+    gap: 1.25rem;
+  }
+
+  .experience-item {
+    padding-left: 1.5rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .experience-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .experience-title {
+    font-size: 1rem;
+  }
+
+  .experience-company {
+    font-size: 0.9rem;
+  }
+
+  .experience-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .meta-item {
+    font-size: 0.8rem;
+  }
+
+  .experience-achievements li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+

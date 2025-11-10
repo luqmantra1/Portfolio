@@ -4,13 +4,7 @@
   position: relative;
 }
 
-/* Portfolio View Styles */
-.portfolio-container {
-  position: relative;
-  overflow-x: hidden;
-}
 
-/* Resume View Styles */
 .resume-container {
   display: flex;
   max-width: 1400px;
@@ -27,16 +21,15 @@
   padding: 2rem;
   position: sticky;
   top: 80px;
-  height: calc(100vh - 80px);
-  overflow-y: auto;
+  height: fit-content;
+  max-height: calc(100vh - 80px);
   z-index: 1;
 }
 
 .resume-main {
   flex: 1;
   padding: 2rem 3rem;
-  max-width: var(--content-max-width);
-  margin: 0 auto;
+  width: 100%;
 }
 
 /* Section Styling */
@@ -70,6 +63,7 @@ section {
 @media (max-width: 1024px) {
   .resume-container {
     flex-direction: column;
+    max-width: 100%;
   }
 
   .resume-sidebar {
@@ -80,16 +74,34 @@ section {
     border-right: none;
     border-bottom: 1px solid var(--border-color);
     padding: 2rem;
+    max-height: none;
+    min-width: unset;
   }
 
   .resume-main {
     padding: 2rem 1.5rem;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-container {
+    padding: 1rem 1.5rem;
+  }
+
+  section {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 768px) {
   .resume-container {
     padding-top: 70px;
+    max-width: 100%;
   }
 
   .resume-sidebar {
@@ -98,23 +110,96 @@ section {
 
   .resume-main {
     padding: 1.5rem 1rem;
+    width: 100%;
+  }
+
+  section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 80px;
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .section-title::after {
+    width: 50px;
+    height: 2px;
+  }
+
+  .nav-container {
+    padding: 1rem;
+  }
+
+  .nav-logo-section {
+    gap: 0.75rem;
+  }
+
+  .back-to-portfolio-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-menu {
+    gap: 1.5rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
+  .resume-container {
+    padding-top: 65px;
+  }
+
   .resume-sidebar {
     padding: 1rem;
   }
 
   .resume-main {
-    padding: 1rem;
+    padding: 1rem 0.75rem;
   }
 
   section {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    scroll-margin-top: 75px;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .section-title::after {
+    width: 40px;
+    height: 2px;
+  }
+
+  .nav-container {
+    padding: 0.75rem;
+  }
+
+  .nav-logo-section {
+    gap: 0.5rem;
+  }
+
+  .back-to-portfolio-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
   }
 }
