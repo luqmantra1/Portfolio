@@ -65,6 +65,7 @@ const Projects = () => {
       tech: ['HTML', 'CSS', 'PHP'],
       type: 'Diploma Final Project',
       featured: false,
+      live: 'https://drive.google.com/file/d/1--pP-MIk1G5SpQNxQ_a6OG4JrONKvCyS/view?usp=sharing'
     },
   ]
 
