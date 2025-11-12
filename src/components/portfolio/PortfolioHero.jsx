@@ -84,7 +84,7 @@ const PortfolioHero = () => {
           Passionate about creating resilient, high-performing applications with a focus on security and innovation.
         </p> */}
         <div className="hero-social">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
+          <a href="https://github.com/luqmantra1" target="_blank" rel="noopener noreferrer" className="social-link">
             <FaGithub />
           </a>
           <a href="https://www.linkedin.com/in/luqmantra" target="_blank" rel="noopener noreferrer" className="social-link">
