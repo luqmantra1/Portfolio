@@ -62,7 +62,7 @@ const Profile = () => {
             <FaLinkedin />
           </a>
           <a 
-            href="https://github.com" 
+            href="https://github.com/luqmantra1" 
             target="_blank" 
             rel="noopener noreferrer"
             className="contact-item"

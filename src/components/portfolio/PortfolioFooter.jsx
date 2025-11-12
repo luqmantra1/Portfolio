@@ -11,7 +11,7 @@ const PortfolioFooter = () => {
             <p>I'm always open to discussing new projects and opportunities.</p>
           </div>
           <div className="footer-social">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://github.com/luqmantra1" target="_blank" rel="noopener noreferrer" className="social-icon">
               <FaGithub />
             </a>
             <a href="https://www.linkedin.com/in/luqmantra" target="_blank" rel="noopener noreferrer" className="social-icon">
