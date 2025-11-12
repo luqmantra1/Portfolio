@@ -9,7 +9,8 @@ const Projects = () => {
       tech: ['PHP', 'Laravel', 'Responsive Design','HTML5','Corporate Website'],
       type: 'Freelance Project',
       featured: true,
-      live: 'https://sepakatgroup.com'
+      live: 'https://sepakatgroup.com',
+      image: '/sepakat.png'
     },
     {
       title: 'Funeral Service Data Portal',
@@ -17,7 +18,8 @@ const Projects = () => {
       tech: ['PHP', 'Laravel', 'MySQL'],
       type: 'Freelance Project',
       featured: true,
-      live: 'https://mz-dus.com/'
+      live: 'https://mz-dus.com/',
+      image: '/dataupload1.png'
     },
     {
       title: 'Freshwater Prawn AI Gender Detection',
@@ -25,6 +27,7 @@ const Projects = () => {
       tech: ['Python', 'Streamlit', 'Computer Vision', 'Machine Learning'],
       type: 'Freelance Project',
       featured: true,
+      image: '/prawn1.jpeg'
     },
     {
       title: 'E-Statistik System for LPKtn',
@@ -32,7 +35,8 @@ const Projects = () => {
       tech: ['PHP', 'CodeIgniter', 'MySQL'],
       type: 'Professional Project',
       featured: true,
-      live: 'https://e-statistic.lpktn.gov.my/'
+      live: 'https://e-statistic.lpktn.gov.my/',
+      image: '/lpktn.png'
     },
     {
       title: 'Portfolio Website',
@@ -41,15 +45,17 @@ const Projects = () => {
       type: 'Personal Portfolio',
       featured: false,
       live: 'https://luqmantra.my',
-      github: 'https://github.com/luqmantra1/Portfolio'
+      github: 'https://github.com/luqmantra1/Portfolio',
+      image: '/portfolio.png'
     },
     {
       title: 'K Prog AI Labs Website',
       description: 'Implemented the frontend of KPROG AI LABS’ responsive web platform, creating a modern, mobile-friendly interface. Focused on intuitive user experience, performance optimization, and seamless functionality across devices.',
-      tech: ['HTML5', 'CSS3', ' Javascript', 'Responsive','Interactive'],
+      tech: ['HTML5', 'CSS3', 'Javascript', 'Responsive','Interactive'],
       type: 'Company Website',
       featured: false,
-      live: 'https://kprog.app/'
+      live: 'https://kprog.app/',
+      image: '/kprog1.png'
     },
     {
       title: 'Secure IT Monitoring Dashboard System',
@@ -57,7 +63,7 @@ const Projects = () => {
       tech: ['PHP', 'Laravel', 'MySQL', 'SIEM'],
       type: 'Degree Final Project',
       featured: false,
-      live: 'https://drive.google.com/file/d/1IfX-frzjOpV9lv2w5eeDu4CjL2Hj28E4/view?usp=sharing'
+      live: 'https://drive.google.com/file/d/1IfX-frzjOpV9lv2w5eeDu4CjL2Hj28E4/view?usp=sharing',
     },
     {
       title: 'E-Commerce Thrift Shop Platform – TNC.MY',
@@ -65,7 +71,7 @@ const Projects = () => {
       tech: ['HTML', 'CSS', 'PHP'],
       type: 'Diploma Final Project',
       featured: false,
-      live: 'https://drive.google.com/file/d/1--pP-MIk1G5SpQNxQ_a6OG4JrONKvCyS/view?usp=sharing'
+      live: 'https://drive.google.com/file/d/1--pP-MIk1G5SpQNxQ_a6OG4JrONKvCyS/view?usp=sharing',
     },
   ]
 
@@ -75,6 +81,11 @@ const Projects = () => {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div key={index} className={`project-card ${project.featured ? 'featured' : ''}`}>
+            {project.image && (
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
+            )}
             <div className="project-header">
               <span className="project-type">{project.type}</span>
               {project.featured && <span className="featured-badge">Featured</span>}
@@ -87,12 +98,16 @@ const Projects = () => {
               ))}
             </div>
             <div className="project-links">
-              <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer" aria-label="View project">
-                <FaExternalLinkAlt /> Live
-              </a>
-              <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer" aria-label="View code">
-                <FaGithub /> Code
-              </a>
+              {project.live && (
+                <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
+                  <FaExternalLinkAlt /> Live
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
+                  <FaGithub /> Code
+                </a>
+              )}
             </div>
           </div>
         ))}
