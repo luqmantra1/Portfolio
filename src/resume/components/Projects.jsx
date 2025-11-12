@@ -58,6 +58,16 @@ const Projects = () => {
       image: '/kprog1.png'
     },
     {
+      title: 'Corporate Website',
+      description: 'Built a professional and responsive corporate website for IKTISASS using WordPress. Implemented custom themes, optimized performance, and ensured SEO-friendly structure. Focused on modern design and mobile responsiveness for enhanced user experience.',
+      tech: ['WordPress', 'PHP', 'Elementor', 'HTML5', 'CSS3', 'SEO', 'Responsive Design'],
+      type: 'Business Website',
+      featured: false,
+      live: 'https://iktisass2.mikazadrg.com.my/',
+      github: null,
+      image: '/iktisass.png'
+    },    
+    {
       title: 'Secure IT Monitoring Dashboard System',
       description: 'Designed and built a real-time dashboard system for monitoring IT infrastructure with a focus on cybersecurity metrics. Integrated basic SIEM capabilities to display log events, user access, and security alerts.',
       tech: ['PHP', 'Laravel', 'MySQL', 'SIEM'],

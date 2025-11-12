@@ -8,7 +8,7 @@ const Education = () => {
       major: 'Major in Cyber Security',
       institution: 'Universiti Poly-Tech Malaysia (UPTM)',
       period: 'Apr 2023 - Oct 2025',
-      cgpa: '3.52',
+      cgpa: '3.62',
       achievements: [
         'Secure IT Monitoring Dashboard System (Degree Final Project)',
         'TechCrafters Event (SULAM Program) - Media Team Lead'
