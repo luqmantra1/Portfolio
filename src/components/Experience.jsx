@@ -4,6 +4,19 @@ import './Experience.css'
 const Experience = () => {
   const experiences = [
     {
+      title: 'Junior Web Developer',
+      company: 'O2O Ecommerce Sdn Bhd',
+      location: 'Petaling Jaya, Malaysia',
+      period: 'Dec 2025 - Present',
+      type: 'Full-time',
+      achievements: [
+        'Engineered and deployed the official company website (o2o.my) leveraging the Astro framework and JavaScript to achieve optimal frontend performance',
+        'Developed the BNBC client website from the ground up utilizing WordPress and the Divi Builder, customizing the design to meet specific business requirements',
+        'Maintained and enhanced the backend infrastructure for a Taiwanese client platform (HQ852), writing and modifying code using the CakePHP framework',
+        'Collaborated directly with the technical support team to troubleshoot website issues, resolve client tickets, and ensure smooth operational workflows'
+      ]
+    },
+    {
       title: 'System Engineer (IT Support)',
       company: 'Beyond2u Sdn Bhd',
       location: 'Cheras, Malaysia',

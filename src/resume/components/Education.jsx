@@ -29,7 +29,11 @@ const Education = () => {
     {
       name: 'CCNA: Switching, Routing, and Wireless Essentials',
       issuer: 'Cisco'
-    }
+    },
+    {
+      name: 'CompTia Cloud+',
+      issuer: 'Comptia'
+    },
   ]
 
   return (
@@ -78,6 +82,27 @@ const Education = () => {
                 <span className="cert-issuer">{cert.issuer}</span>
               </div>
             ))}
+          </div>
+
+          <div className="certifications-media">
+            <h4 className="certifications-media-title">Certification Gallery</h4>
+            <p className="certifications-media-subtitle">
+              Showcase snapshots of your key certificates.
+            </p>
+            <div className="certifications-media-frame">
+              <img
+                src="/certifications-placeholder.jpg"
+                alt="Certification showcase"
+                className="certifications-image"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                  e.target.nextElementSibling.style.display = 'flex'
+                }}
+              />
+              <div className="certifications-image-fallback">
+                <span>Place your certification collage at `/public/certifications-placeholder.jpg`.</span>
+              </div>
+            </div>
           </div>
         </div>
       )}

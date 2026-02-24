@@ -284,12 +284,28 @@
 }
 
 @media (max-width: 968px) {
+  .nav-wrapper {
+    padding: 0.85rem 1.25rem;
+    gap: 1rem;
+  }
+
   .nav-links {
     display: none;
   }
 
   .resume-btn span {
     display: none;
+  }
+
+  .resume-btn {
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(255, 107, 53, 0.45);
+    display:none;
+  }
+
+  .resume-btn svg {
+    font-size: 1.1rem;
   }
 
   .nav-toggle {

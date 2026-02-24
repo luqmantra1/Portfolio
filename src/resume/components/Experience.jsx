@@ -4,6 +4,19 @@ import './Experience.css'
 const Experience = () => {
   const experiences = [
     {
+      title: 'Junior Web Developer',
+      company: 'O2O Ecommerce Sdn Bhd',
+      location: 'Petaling Jaya, Malaysia',
+      period: 'Dec 2025 - Present',
+      type: 'Full-time',
+      achievements: [
+        'Developed and deployed the official company website (o2o.my) leveraging the Astro framework and JavaScript for optimized frontend performance',
+        'Built the BNBC client website from the ground up using WordPress and the Divi Builder, tailoring the design to specific business requirements',
+        'Maintained and updated the backend infrastructure for the HQ852 website (Taiwanese client) using the CakePHP framework',
+        'Assisted the technical support team by troubleshooting website issues, resolving client tickets, and ensuring smooth daily operations'
+      ]
+    },
+    {
       title: 'Co-Founder & Developer',
       company: 'K PROG AI LABS',
       location: 'Kuala Lumpur, Malaysia',

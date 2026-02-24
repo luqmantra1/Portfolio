@@ -45,63 +45,72 @@
     font-size: 1rem;
   }
   
-  /* Gallery aligned like projects section */
+/* Gallery aligned like projects section */
+.volunteering-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.07);
+}
+  
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-volunteering {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .volunteering-intro {
+    font-size: 0.95rem;
+  }
+
   .volunteering-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
-  
-  .gallery-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .portfolio-volunteering {
+    padding: 2rem 1rem;
   }
-  
-  .gallery-item img:hover {
-    transform: scale(1.05);
+
+  .section-number {
+    font-size: 1rem;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .portfolio-volunteering {
-      padding: 3rem 1.5rem;
-    }
-  
-    .section-title {
-      font-size: 1.75rem;
-    }
-  
-    .volunteering-intro {
-      font-size: 0.95rem;
-    }
-  
-    .gallery-item img {
-      height: 150px;
-    }
+
+  .section-title {
+    font-size: 1.5rem;
   }
-  
-  @media (max-width: 480px) {
-    .portfolio-volunteering {
-      padding: 2rem 1rem;
-    }
-  
-    .section-number {
-      font-size: 1rem;
-    }
-  
-    .section-title {
-      font-size: 1.5rem;
-    }
-  
-    .volunteering-intro {
-      font-size: 0.9rem;
-    }
-  
-    .gallery-item img {
-      height: 120px;
-    }
+
+  .volunteering-intro {
+    font-size: 0.9rem;
   }
+
+  .volunteering-gallery {
+    gap: 1rem;
+  }
+}
   

@@ -15,7 +15,7 @@ const Profile = () => {
     >
       {/* Replace LH with profile picture if available */}
       <img 
-        src="/dp6.jpeg" 
+        src="/dp7.png" 
         alt="Luqman Hakim" 
         className="avatar-image"
         onError={(e) => {
@@ -92,7 +92,7 @@ const Profile = () => {
       </div>
 
       <a 
-    href="https://drive.google.com/file/d/1-aH57rqYrsqqyGrCve5pwkkgZZdayMzv/view?usp=sharing" 
+    href="https://drive.google.com/file/d/1-wuS5n4qojl96pwjbF3vARgsPzZE_qHf/view?usp=sharing" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="btn-resume"

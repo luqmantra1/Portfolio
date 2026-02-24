@@ -14,10 +14,18 @@ function App() {
 
   const navigateToResume = () => {
     setCurrentView('resume')
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto'
+    })
   }
 
   const navigateToPortfolio = () => {
     setCurrentView('portfolio')
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto'
+    })
   }
 
   if (isLoading) {
