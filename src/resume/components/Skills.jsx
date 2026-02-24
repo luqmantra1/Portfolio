@@ -4,7 +4,7 @@ const Skills = () => {
   const skillCategories = [
     {
       category: 'Backend Development',
-      skills: ['PHP', 'Laravel', 'CodeIgniter', 'MySQL', 'RESTful APIs']
+      skills: ['PHP', 'Laravel', 'CodeIgniter', 'MySQL', 'RESTful APIs', 'CakePHP','Node.js']
     },
     {
       category: 'Cybersecurity',
@@ -12,15 +12,15 @@ const Skills = () => {
     },
     {
       category: 'AI/ML Development',
-      skills: ['Python', 'Streamlit', 'Computer Vision', 'Machine Learning']
+      skills: ['Python', 'Streamlit', 'Computer Vision', 'Machine Learning', 'OpenAI', 'LangChain', 'Hugging Face', 'TensorFlow', 'PyTorch']
     },
     {
       category: 'Frontend & Design',
-      skills: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Figma', 'UI/UX Design','React']
+      skills: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Figma', 'UI/UX Design','React','Astro','Tailwind CSS', 'WordPress', 'Divi Builder']
     },
     {
       category: 'Tools & Practices',
-      skills: ['Git', 'Agile Project Management', 'Digital Marketing', 'System Administration']
+      skills: ['Git', 'Agile Project Management', 'Digital Marketing', 'System Administration', 'Docker', 'Kubernetes']
     }
   ]
 
