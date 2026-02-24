@@ -28,11 +28,13 @@ const Education = () => {
   const certifications = [
     {
       name: 'CCNA: Switching, Routing, and Wireless Essentials',
-      issuer: 'Cisco'
+      issuer: 'Cisco',
+      image: '/ccna.png' 
     },
     {
-      name: 'CompTia Cloud+',
-      issuer: 'Comptia'
+      name: 'CompTIA Cloud+',
+      issuer: 'CompTIA',
+      image: '/cloud+.png' 
     },
   ]
 
@@ -71,39 +73,55 @@ const Education = () => {
       </div>
 
       {certifications.length > 0 && (
-        <div className="certifications-section">
-          <h3 className="certifications-title">
-            <FaAward /> Certifications
+        <div className="certifications-section" style={{ marginTop: '40px' }}>
+          <h3 className="certifications-title" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
+            <FaAward style={{ color: '#ff6b00' }} /> Certifications
           </h3>
-          <div className="certifications-list">
+          
+          <div className="certifications-list" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
             {certifications.map((cert, index) => (
-              <div key={index} className="certification-item">
-                <span className="cert-name">{cert.name}</span>
-                <span className="cert-issuer">{cert.issuer}</span>
+              <div key={index} className="certification-item" style={{ 
+                flex: '1 1 300px', 
+                backgroundColor: '#111', 
+                border: '1px solid #333', 
+                borderRadius: '8px', 
+                padding: '20px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '20px'
+              }}>
+                
+                {/* 1. Black and Orange Text Header */}
+                <div className="cert-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', borderBottom: '1px solid #222', paddingBottom: '15px' }}>
+                  <span className="cert-name" style={{ fontWeight: 'bold', color: '#fff', fontSize: '1.1rem', paddingRight: '10px' }}>
+                    {cert.name}
+                  </span>
+                  <span className="cert-issuer" style={{ fontWeight: 'bold', color: '#ff6b00', whiteSpace: 'nowrap' }}>
+                    {cert.issuer}
+                  </span>
+                </div>
+
+                {/* 2. Picture directly underneath inside the same dark card */}
+                {cert.image && (
+                  <div className="cert-image-container" style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#0a0a0a', padding: '10px', borderRadius: '4px', border: '1px solid #222' }}>
+                    <img
+                      src={cert.image}
+                      alt={`${cert.name} Certificate`}
+                      style={{ 
+                        width: '100%', 
+                        height: 'auto', 
+                        maxHeight: '300px',
+                        objectFit: 'contain', 
+                        borderRadius: '4px' 
+                      }}
+                    />
+                  </div>
+                )}
+
               </div>
             ))}
           </div>
 
-          <div className="certifications-media">
-            <h4 className="certifications-media-title">Certification Gallery</h4>
-            <p className="certifications-media-subtitle">
-              Showcase snapshots of your key certificates.
-            </p>
-            <div className="certifications-media-frame">
-              <img
-                src="/certifications-placeholder.jpg"
-                alt="Certification showcase"
-                className="certifications-image"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                  e.target.nextElementSibling.style.display = 'flex'
-                }}
-              />
-              <div className="certifications-image-fallback">
-                <span>Place your certification collage at `/public/certifications-placeholder.jpg`.</span>
-              </div>
-            </div>
-          </div>
         </div>
       )}
     </section>
@@ -111,4 +129,3 @@ const Education = () => {
 }
 
 export default Education
-
