@@ -3,6 +3,19 @@ import './PortfolioExperience.css'
 
 const PortfolioExperience = () => {
   const experiences = [
+     {
+  title: 'Technical Support Engineer',
+  company: 'Fronix Sdn Bhd',
+  location: 'Petaling Jaya, Malaysia',
+  period: 'April 2026 - Present',
+  type: 'Full-time',
+  achievements: [
+    'Spearheading the technical proposal and implementation strategy for a multi-layered ESET cybersecurity ecosystem for UiTM',
+    'Providing high-level technical support and troubleshooting for enterprise-scale security deployments and client infrastructures',
+    'Collaborating with Project Managers to define maintenance workflows and ensure seamless post-deployment system stability',
+    'Managing and resolving complex technical support tickets to maintain high service-level standards for diverse client portfolios'
+  ]
+},
     {
       title: 'Junior Web Developer',
       company: 'O2O Ecommerce Sdn Bhd',
