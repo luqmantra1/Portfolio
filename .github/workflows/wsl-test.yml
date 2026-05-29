@@ -1,0 +1,29 @@
+name: WSL Ubuntu Local Automation Test
+
+on:
+  push:
+    branches: [ main, master ] # Triggers whenever you push to main or master
+
+jobs:
+  local-hardware-check:
+    # This must match the default tag seen on your GitHub screen (self-hosted)
+    runs-on: self-hosted 
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Say Hello and Run Diagnostic
+        run: |
+          echo "====================================================="
+          echo "🔥 THE RUNNER IS ALIVE! HELLO FROM YOUR TERMINAL! 🔥"
+          echo "====================================================="
+          echo "Current Kernel: $(uname -r)"
+          echo "Who am I running as: $(whoami)"
+          echo "Checking directory: $(pwd)"
+          
+      - name: Verify Docker Connectivity
+        run: |
+          echo "Testing if the runner can talk to your Docker Desktop..."
+          docker --version
+          docker ps
