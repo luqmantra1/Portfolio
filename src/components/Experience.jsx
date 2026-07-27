@@ -10,10 +10,11 @@ const Experience = () => {
       period: 'April 2026 - Present',
       type: 'Full-time',
       achievements: [
-        'Spearheading the technical proposal and implementation strategy for a multi-layered ESET cybersecurity ecosystem for UiTM',
-        'Providing high-level technical support and troubleshooting for enterprise-scale security deployments and client infrastructures',
-        'Collaborating with Project Managers to define maintenance workflows and ensure seamless post-deployment system stability',
-        'Managing and resolving complex technical support tickets to maintain high service-level standards for diverse client portfolios'
+        'Administered enterprise Linux server infrastructure supporting the Pusat Darah Negara (PDN) Blood Bank System, executing nationwide system deployments across Ministry of Health (KKM) hospital departments.',
+        'Deployed and configured ESET Endpoint Protection and Server Security solutions for key clients (including UiTM), resolving Tier-2 technical escalations and maintaining continuous threat readiness.',
+        'Managed endpoint security operations utilizing Kaspersky Anti-Virus for Radio Televisyen Malaysia (RTM), ensuring maximum uptime and strict security compliance for critical national broadcasting infrastructure.',
+        'Collaborated with Project Managers to define maintenance workflows, draft project schedules, and ensure seamless post-deployment system stability.',
+        'Managed and resolved complex technical support tickets, providing high-level troubleshooting to maintain strict service-level standards for diverse enterprise client portfolios.'
       ]
     },
     {
