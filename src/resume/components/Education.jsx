@@ -46,7 +46,7 @@ const Education = () => {
     {
       name: 'Credly Profile',
       issuer: 'Credly',
-      image: '/eset.png', // Added the missing comma here!
+      image: '/Credly.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra/badges/credly'
     },
   ]

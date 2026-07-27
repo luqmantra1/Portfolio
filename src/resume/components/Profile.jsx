@@ -7,7 +7,7 @@ const Profile = () => {
       <div className="profile-header">
   <div className="profile-avatar">
     <a 
-      href="https://drive.google.com/file/d/1X7xyioS17nKddnKrayBvintsU_Uccoxc/view?usp=sharing" 
+      href="https://drive.google.com/file/d/1AO3H7v93H5WWUx4urby5SW6QOA4XUeUt/view?usp=sharing" 
       target="_blank" 
       rel="noopener noreferrer"
       className="avatar-circle"
@@ -92,7 +92,7 @@ const Profile = () => {
       </div>
 
       <a 
-    href="https://drive.google.com/file/d/1X7xyioS17nKddnKrayBvintsU_Uccoxc/view?usp=sharing" 
+    href="https://drive.google.com/file/d/1AO3H7v93H5WWUx4urby5SW6QOA4XUeUt/view?usp=sharing" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="btn-resume"
