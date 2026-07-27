@@ -36,6 +36,17 @@ const Education = () => {
       issuer: 'CompTIA',
       image: '/cloud+.png' 
     },
+      {
+      name: 'ESET Certified Engineer',
+      issuer: 'ESET',
+      image: '/eset.png' 
+    },
+    {
+      name: 'Credly Certifications',
+      issuer: 'Credly',
+      image: '/eset.png',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra/badges/credly'
+    },
   ]
 
   return (
