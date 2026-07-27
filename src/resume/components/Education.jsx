@@ -29,22 +29,24 @@ const Education = () => {
     {
       name: 'CCNA: Switching, Routing, and Wireless Essentials',
       issuer: 'Cisco',
-      image: '/ccna.png' 
+      image: '/ccna.png',
+      verifyUrl: 'https://www.credly.com/badges/3b8ce121-300d-46f0-8a51-a8a6b0dde35b/public_url' 
     },
     {
       name: 'CompTIA Cloud+',
       issuer: 'CompTIA',
-      image: '/cloud+.png' 
-    },
-      {
-      name: 'ESET Certified Engineer',
-      issuer: 'ESET',
-      image: '/eset.png' 
+      image: '/cloud+.png',
+      verifyUrl: 'https://www.credly.com/badges/6e91a322-ec84-44b9-a1ed-15d12d0b8ab3/public_url' 
     },
     {
-      name: 'Credly Certifications',
-      issuer: 'Credly',
+      name: 'ESET Certified Engineer',
+      issuer: 'ESET',
       image: '/eset.png',
+    },
+    {
+      name: 'Credly Profile',
+      issuer: 'Credly',
+      image: '/eset.png', // Added the missing comma here!
       verifyUrl: 'https://www.credly.com/users/luqman-tra/badges/credly'
     },
   ]
@@ -126,6 +128,39 @@ const Education = () => {
                         borderRadius: '4px' 
                       }}
                     />
+                  </div>
+                )}
+
+                {/* 3. Verification Button Link (Only shows if verifyUrl exists) */}
+                {cert.verifyUrl && (
+                  <div style={{ marginTop: 'auto', textAlign: 'center' }}>
+                    <a 
+                      href={cert.verifyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'block',
+                        padding: '10px',
+                        backgroundColor: 'transparent',
+                        color: '#ff6b00',
+                        border: '1px solid #ff6b00',
+                        borderRadius: '4px',
+                        textDecoration: 'none',
+                        fontWeight: 'bold',
+                        fontSize: '0.9rem',
+                        transition: 'background-color 0.2s ease',
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.backgroundColor = '#ff6b00';
+                        e.currentTarget.style.color = '#111';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = '#ff6b00';
+                      }}
+                    >
+                      Verify Credential
+                    </a>
                   </div>
                 )}
 
