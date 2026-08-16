@@ -70,7 +70,7 @@ const Profile = () => {
 
       <div className="profile-section">
   <a 
-    href="https://drive.google.com/file/d/1AO3H7v93H5WWUx4urby5SW6QOA4XUeUt/view?usp=sharing" 
+    href="https://drive.google.com/file/d/1MS0FBujAxRsCPdPVK22lK88iJYMq8QLE/view?usp=sharing" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="btn-resume"
