@@ -63,7 +63,7 @@ const PortfolioAbout = () => {
               Bridging Mission-Critical Systems Support with Modern Full-Stack Development
             </h3>
             <p className="bio-text">
-              I am a result-oriented Full-Stack Developer and Systems Engineer based in Malaysia.
+              I am a results-oriented Full-Stack Developer and Systems Engineer based in Malaysia.
               My expertise centers on ensuring uninterrupted uptime and maximum threat resilience for
               vital enterprise environments—including managing server infrastructure for the <strong>Pusat Darah Negara (PDN)
                 Blood Bank System</strong> across Ministry of Health (KKM) hospital departments.
