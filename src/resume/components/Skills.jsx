@@ -1,47 +1,60 @@
+import { FaServer, FaShieldAlt, FaDatabase, FaCode, FaCloud, FaRobot } from 'react-icons/fa'
 import './Skills.css'
 
 const Skills = () => {
   const skillCategories = [
     {
-      category: 'Backend Development',
-      skills: ['PHP', 'Laravel', 'CodeIgniter', 'MySQL', 'RESTful APIs', 'CakePHP','Node.js']
+      category: 'Linux & Infrastructure',
+      icon: <FaServer />,
+      skills: ['Linux Server Administration', 'JumpServer', 'Server Hardening', 'Bash Scripting', 'PDN Healthcare Deployments']
     },
     {
-      category: 'Cybersecurity',
-      skills: ['SIEM Tools', 'Burp Suite', 'Nmap', 'Secure Coding', 'Vulnerability Assessment']
+      category: 'Enterprise Security & Monitoring',
+      icon: <FaShieldAlt />,
+      skills: ['ESET Endpoint & Server Security', 'Checkmk Monitoring', 'Kaspersky Operations (RTM)', 'SIEM Tools', 'Burp Suite', 'Secure Software Development']
     },
     {
-      category: 'AI/ML Development',
-      skills: ['Python', 'Streamlit', 'Computer Vision', 'Machine Learning', 'OpenAI', 'LangChain', 'Hugging Face', 'TensorFlow', 'PyTorch']
+      category: 'Backend Engineering',
+      icon: <FaDatabase />,
+      skills: ['PHP', 'Laravel', 'CodeIgniter', 'C#', 'ASP.NET', 'MySQL', 'RESTful APIs', 'Role-Based Access Control (RBAC)']
     },
     {
-      category: 'Frontend & Design',
-      skills: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Figma', 'UI/UX Design','React','Astro','Tailwind CSS', 'WordPress', 'Divi Builder']
+      category: 'Frontend & Web Development',
+      icon: <FaCode />,
+      skills: ['React.js', 'TypeScript', 'JavaScript (ES6+)', 'Astro', 'Single Page Applications (SPA)', 'HTML5 & CSS3', 'Responsive UI/UX', 'Client-Side Algorithms']
     },
     {
-      category: 'Tools & Practices',
-      skills: ['Git', 'Agile Project Management', 'Digital Marketing', 'System Administration', 'Docker', 'Kubernetes']
+      category: 'DevOps & Cloud',
+      icon: <FaCloud />,
+      skills: ['Docker', 'Terraform (IaC)', 'GitHub Actions CI/CD', 'CompTIA Cloud+', 'Git']
+    },
+    {
+      category: 'AI / Machine Learning',
+      icon: <FaRobot />,
+      skills: ['Python', 'YOLOv8 Object Detection', 'PyTorch', 'Streamlit', 'Computer Vision']
     }
   ]
 
   return (
-    <div id="skills" className="skills-sidebar">
-      <h3 className="skills-title">Skills</h3>
-      <div className="skills-list">
+    <section id="skills" className="resume-skills-section">
+      <h2 className="section-title">Core Competencies & Technical Skills</h2>
+      <div className="skills-grid-resume">
         {skillCategories.map((category, index) => (
-          <div key={index} className="skill-category">
-            <h4 className="skill-category-title">{category.category}</h4>
-            <div className="skill-tags">
+          <div key={index} className="skill-domain-card glass-panel">
+            <div className="skill-domain-header">
+              <div className="skill-domain-icon">{category.icon}</div>
+              <h3 className="skill-domain-title">{category.category}</h3>
+            </div>
+            <div className="skill-tags-flow">
               {category.skills.map((skill, idx) => (
-                <span key={idx} className="skill-tag">{skill}</span>
+                <span key={idx} className="skill-tag-pill">{skill}</span>
               ))}
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 
 export default Skills
-

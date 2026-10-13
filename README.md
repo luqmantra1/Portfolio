@@ -1,4 +1,4 @@
-# Portfolio - Luqman Hakim
+# Portfolio - Luqman TRA
 
 A modern, responsive portfolio website built with React and Vite, showcasing my work as a Cyber Security graduate and Software Developer.
 

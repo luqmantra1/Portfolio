@@ -4,90 +4,92 @@ import './Projects.css'
 const Projects = () => {
   const projects = [
     {
-      title: 'Corporate Website - Sepakat Group',
-      description: 'Built and launched the official corporate website for sepakatgroup.com, delivering a fully responsive, multilingual experience with a streamlined contact management system. The redesign helped boost client inquiries by 25%.',
-      tech: ['PHP', 'Laravel', 'Responsive Design','HTML5','Corporate Website'],
-      type: 'Freelance Project',
+      title: 'Soluna Ent Corporate Website',
+      description: 'Directed the technical strategy and development for a startup venture, engineering a highly optimized, mobile-first company portal focused on cross-browser compatibility and rapid load times for maximum user engagement.',
+      tech: ['Modern Web Frameworks', 'Frontend Optimization', 'HTML5 & CSS3', 'Mobile-First UI/UX'],
+      type: 'Startup Venture',
       featured: true,
-      live: 'https://sepakatgroup.com',
-      image: '/sepakat.png'
+      live: null,
+      image: null
     },
     {
-      title: 'Funeral Service Data Portal',
-      description: 'Developed a secure data upload and management portal for funeral service providers using PHP and Laravel. The platform modernizes record-keeping and allows families to safely access relevant information through authenticated logins.',
-      tech: ['PHP', 'Laravel', 'MySQL'],
-      type: 'Freelance Project',
+      title: 'Anime Search Application',
+      description: 'Engineered a dynamic Single Page Application (SPA) using React.js to asynchronously consume the YouTube Data API, implementing real-time data fetching, state management, and optimized DOM rendering for video metadata.',
+      tech: ['React.js', 'RESTful API', 'YouTube Data API', 'State Management', 'SPA'],
+      type: 'Single Page Application (SPA)',
       featured: true,
-      live: 'https://mz-dus.com/',
-      image: '/dataupload1.png'
+      live: null,
+      image: null
     },
     {
-      title: 'Freshwater Prawn AI Gender Detection',
-      description: 'Built an automated freshwater prawn gender classification system using Python, Streamlit, and a YOLOv8-based computer vision model. Achieved 85% accuracy and reduced manual inspection work by about 25%.',
-      tech: ['Python', 'Streamlit', 'Computer Vision', 'Machine Learning'],
-      type: 'Freelance Project',
+      title: 'Paws & Preferences (Adoption Matcher)',
+      description: 'Developed a data-driven matching engine utilizing modular React Component Architecture; implemented client-side filtering algorithms and efficient state management to process and render datasets without server-side page reloads.',
+      tech: ['React.js', 'Client-Side Algorithms', 'Component Architecture', 'State Management'],
+      type: 'Web Application',
       featured: true,
-      image: '/prawn1.jpeg'
+      live: null,
+      image: null
     },
     {
-      title: 'E-Statistik System for LPKtn',
-      description: 'Developed a data-driven web application using CodeIgniter to automate port statistics workflows, cutting reporting time by roughly 40 percent. Implemented role-based access control to secure port data and ensure alignment with government requirements.',
-      tech: ['PHP', 'CodeIgniter', 'MySQL'],
-      type: 'Professional Project',
-      featured: true,
-      live: 'https://e-statistic.lpktn.gov.my/',
-      image: '/lpktn.png'
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'Developed a responsive and interactive personal portfolio website using React and modern web technologies. Focused on clean design, seamless user experience, and mobile-friendly performance to showcase projects and skills effectively.',
-      tech: ['React', 'Javascript', 'HTML5', 'CSS3','Responsive','Interactive'],
+      title: 'Professional Portfolio (Luqmantra.my)',
+      description: 'Architected and deployed a mobile-first web portal, focusing on responsive CSS frameworks, cross-browser compatibility, and frontend performance optimization for rapid load times.',
+      tech: ['React.js', 'UI/UX Optimization', 'CSS3', 'Vite', 'Production Deployment'],
       type: 'Personal Portfolio',
-      featured: false,
+      featured: true,
       live: 'https://luqmantra.my',
       github: 'https://github.com/luqmantra1/Portfolio',
       image: '/portfolio.png'
     },
     {
-      title: 'K Prog AI Labs Website',
-      description: 'Implemented the frontend of KPROG AI LABS’ responsive web platform, creating a modern, mobile-friendly interface. Focused on intuitive user experience, performance optimization, and seamless functionality across devices.',
-      tech: ['HTML5', 'CSS3', 'Javascript', 'Responsive','Interactive'],
-      type: 'Company Website',
-      featured: false,
-      live: 'https://kprog.app/',
-      image: '/kprog1.png'
+      title: 'Freshwater Prawn AI Gender Detection',
+      description: 'Developed a Python/Streamlit Computer Vision model using YOLOv8 for aquaculture classification, achieving 85% classification accuracy and cutting manual inspection work by roughly 25%.',
+      tech: ['Python', 'Streamlit', 'YOLOv8', 'PyTorch', 'Computer Vision'],
+      type: 'Freelance AI Project',
+      featured: true,
+      live: null,
+      image: '/prawn1.jpeg'
     },
     {
-      title: 'Corporate Website',
-      description: 'Built a professional and responsive corporate website for IKTISASS using WordPress. Implemented custom themes, optimized performance, and ensured SEO-friendly structure. Focused on modern design and mobile responsiveness for enhanced user experience.',
-      tech: ['WordPress', 'PHP', 'Elementor', 'HTML5', 'CSS3', 'SEO', 'Responsive Design'],
-      type: 'Business Website',
-      featured: false,
-      live: 'https://iktisass2.mikazadrg.com.my/',
-      github: null,
-      image: '/iktisass.png'
-    },    
-    {
-      title: 'Secure IT Monitoring Dashboard System',
-      description: 'Designed and built a real-time dashboard system for monitoring IT infrastructure with a focus on cybersecurity metrics. Integrated basic SIEM capabilities to display log events, user access, and security alerts.',
-      tech: ['PHP', 'Laravel', 'MySQL', 'SIEM'],
-      type: 'Degree Final Project',
-      featured: false,
-      live: 'https://drive.google.com/file/d/1IfX-frzjOpV9lv2w5eeDu4CjL2Hj28E4/view?usp=sharing',
+      title: 'Funeral Service Data Portal',
+      description: 'Built an RBAC enabled data portal using PHP and Laravel to replace manual record-keeping with secure digital access, authenticated logins, and structured database storage.',
+      tech: ['PHP', 'Laravel', 'MySQL', 'RBAC', 'Data Security'],
+      type: 'Freelance Enterprise Project',
+      featured: true,
+      live: 'https://mz-dus.com/',
+      image: '/dataupload1.png'
     },
     {
-      title: 'E-Commerce Thrift Shop Platform – TNC.MY',
-      description: 'Developed an online thrift store platform focused on user-friendly browsing and purchase of second-hand items. Implemented key e-commerce features such as product listings, shopping cart, and order tracking.',
-      tech: ['HTML', 'CSS', 'PHP'],
-      type: 'Diploma Final Project',
+      title: 'Corporate Website - Sepakat Group',
+      description: 'Deployed the sepakatgroup.com corporate portal integrating multilingual support and a custom contact management system, boosting client conversion inquiries by 25%.',
+      tech: ['PHP', 'Laravel', 'Responsive Design', 'HTML5', 'Corporate Website'],
+      type: 'Freelance Project',
       featured: false,
-      live: 'https://drive.google.com/file/d/1--pP-MIk1G5SpQNxQ_a6OG4JrONKvCyS/view?usp=sharing',
+      live: 'https://sepakatgroup.com',
+      image: '/sepakat.png'
     },
+    {
+      title: 'e-Statistik System for LPKtn',
+      description: 'Developed the e-Statistik web application using CodeIgniter, automating data generation and reducing reporting time by 40%. Implemented strict Role-Based Access Control (RBAC) to secure sensitive government port data.',
+      tech: ['PHP', 'CodeIgniter', 'MySQL', 'RBAC', 'Port Analytics'],
+      type: 'Professional Government Project',
+      featured: false,
+      live: 'https://e-statistic.lpktn.gov.my/',
+      image: '/lpktn.png'
+    },
+    {
+      title: 'TechCrafters SULAM Program',
+      description: 'Managed the digital media pipeline and digital content distribution for promotional campaigns, coordinating digital asset creation and deployment to ensure high-engagement operational flow.',
+      tech: ['Digital Media Pipeline', 'Asset Management', 'Campaign Operations', 'Media Team Lead'],
+      type: 'Digital Asset Initiative',
+      featured: false,
+      live: null,
+      image: '/sulam1.jpeg'
+    }
   ]
 
   return (
     <section id="projects" className="projects">
-      <h2 className="section-title">Projects</h2>
+      <h2 className="section-title">Projects & Involvement</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div key={index} className={`project-card ${project.featured ? 'featured' : ''}`}>

@@ -6,15 +6,16 @@ const About = () => {
       <h2 className="section-title">About Me</h2>
       <div className="about-content">
         <div className="about-text">
-        <p className="about-intro">
-              Cybersecurity graduate specializing in secure software development and IT solutions architecture. 
-              Experienced with Laravel/PHP, IT monitoring dashboards, and e-commerce platforms. Skilled in SOC operations, 
-              SIEM tools, and Burp Suite for security assessments.
-            </p>
-            <p>
-              Passionate about applying cybersecurity best practices in software development. Strong background in Agile project management, 
-              digital marketing, and user-centered design.
-            </p>
+          <p className="about-intro">
+            IT professional with hands-on experience bridging software development and server infrastructure. 
+            Skilled in building and supporting data-driven applications using Python and PHP, with practical experience 
+            integrating frontend interfaces with backend logic.
+          </p>
+          <p>
+            Brings a strong foundation in administering enterprise Linux environments, troubleshooting technical escalations, 
+            and deploying system updates. A collaborative problem-solver who combines networking knowledge with analytical 
+            programming to reliably support and maintain core IT operations and software solutions.
+          </p>
 
           <div className="about-highlights">
             <div className="highlight-item">

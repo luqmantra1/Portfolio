@@ -1,31 +1,40 @@
-import { FaGraduationCap, FaAward } from 'react-icons/fa'
+import { FaGraduationCap, FaAward, FaExternalLinkAlt, FaCheckCircle, FaShieldAlt } from 'react-icons/fa'
 import './Education.css'
 
 const Education = () => {
   const education = [
     {
-      degree: 'Bachelor of Information Technology (Honours)',
-      major: 'Major in Cyber Security',
+      degree: 'Bachelor of IT (Honours) in Cyber Security',
+      major: 'Relevant Coursework: Secure Software Development, IT Infrastructure Monitoring, Network Security, Information Assurance, and SIEM Operations',
       institution: 'Universiti Poly-Tech Malaysia (UPTM)',
-      period: 'Apr 2023 - Oct 2025',
-      cgpa: '3.62',
+      period: '2023 - 2025',
+      cgpa: '3.62 CGPA',
       achievements: [
-        'Secure IT Monitoring Dashboard System (Degree Final Project)',
-        'TechCrafters Event (SULAM Program) - Media Team Lead'
+        'Secure Software Development, IT Infrastructure Monitoring, Network Security & SIEM Operations',
+        'Secure IT Monitoring Dashboard System with SIEM Integration (Degree Final Project)',
+        'TechCrafters SULAM Program - Digital Media Pipeline Lead'
       ]
     },
     {
-      degree: 'Diploma in Science Computer',
-      institution: 'Kolej Universiti Poly-Tech Mara (KUPTM)',
-      period: 'July 2020 - Dec 2022',
-      cgpa: '3.59',
+      degree: 'Diploma in Computer Science',
+      major: 'Relevant Coursework: Web Application Development, Database Management (MySQL), Object-Oriented Programming, and E-Commerce Systems',
+      institution: 'Kolej University Poly-Tech MARA (KUPTM)',
+      period: '2020 - 2022',
+      cgpa: '3.59 CGPA',
       achievements: [
-        'E-Commerce Thrift Shop Platform – TNC.MY (Diploma Final Project)'
+        'Web Application Development, Database Management (MySQL) & E-Commerce Systems',
+        'E-Commerce Web Platform – TNC.MY (Diploma Final Project)'
       ]
     }
   ]
 
   const certifications = [
+    {
+      name: 'Full Stack Web Development',
+      issuer: 'Amazon',
+      image: '/amazon-fullstack.jpeg',
+      verifyUrl: 'https://coursera.org/share/351186393fab306103e71783d48cb980'
+    },
     {
       name: 'CCNA: Switching, Routing, and Wireless Essentials',
       issuer: 'Cisco',
@@ -42,18 +51,21 @@ const Education = () => {
       name: 'ESET Certified Engineer',
       issuer: 'ESET',
       image: '/eset.png',
+      verifyUrl: null
     },
     {
-      name: 'Credly Profile',
-      issuer: 'Credly',
+      name: 'Credly Profile & Digital Badges',
+      issuer: 'Credly Verified',
       image: '/Credly.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra/badges/credly'
-    },
+    }
   ]
 
   return (
     <section id="education" className="education">
-      <h2 className="section-title">Education</h2>
+      <h2 className="section-title">Education & Credentials</h2>
+      
+      {/* Degrees List */}
       <div className="education-list">
         {education.map((edu, index) => (
           <div key={index} className="education-item">
@@ -62,19 +74,25 @@ const Education = () => {
                 <FaGraduationCap />
               </div>
               <div className="education-content">
-                <h3 className="education-degree">{edu.degree}</h3>
+                <div className="edu-title-row">
+                  <h3 className="education-degree">{edu.degree}</h3>
+                  <div className="edu-badges">
+                    <span className="edu-cgpa-pill">{edu.cgpa}</span>
+                    <span className="edu-period-pill">{edu.period}</span>
+                  </div>
+                </div>
                 {edu.major && <p className="education-major">{edu.major}</p>}
                 <div className="education-institution">{edu.institution}</div>
-                <div className="education-meta">
-                  <span className="education-period">{edu.period}</span>
-                  <span className="education-cgpa">CGPA: {edu.cgpa}</span>
-                </div>
+
                 {edu.achievements.length > 0 && (
                   <div className="education-achievements">
                     <strong>Key Achievements:</strong>
                     <ul>
                       {edu.achievements.map((achievement, idx) => (
-                        <li key={idx}>{achievement}</li>
+                        <li key={idx}>
+                          <FaCheckCircle className="edu-check" />
+                          <span>{achievement}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -85,91 +103,52 @@ const Education = () => {
         ))}
       </div>
 
-      {certifications.length > 0 && (
-        <div className="certifications-section" style={{ marginTop: '40px' }}>
-          <h3 className="certifications-title" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-            <FaAward style={{ color: '#ff6b00' }} /> Certifications
-          </h3>
-          
-          <div className="certifications-list" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-            {certifications.map((cert, index) => (
-              <div key={index} className="certification-item" style={{ 
-                flex: '1 1 300px', 
-                backgroundColor: '#111', 
-                border: '1px solid #333', 
-                borderRadius: '8px', 
-                padding: '20px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '20px'
-              }}>
-                
-                {/* 1. Black and Orange Text Header */}
-                <div className="cert-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', borderBottom: '1px solid #222', paddingBottom: '15px' }}>
-                  <span className="cert-name" style={{ fontWeight: 'bold', color: '#fff', fontSize: '1.1rem', paddingRight: '10px' }}>
-                    {cert.name}
-                  </span>
-                  <span className="cert-issuer" style={{ fontWeight: 'bold', color: '#ff6b00', whiteSpace: 'nowrap' }}>
-                    {cert.issuer}
-                  </span>
-                </div>
-
-                {/* 2. Picture directly underneath inside the same dark card */}
-                {cert.image && (
-                  <div className="cert-image-container" style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#0a0a0a', padding: '10px', borderRadius: '4px', border: '1px solid #222' }}>
-                    <img
-                      src={cert.image}
-                      alt={`${cert.name} Certificate`}
-                      style={{ 
-                        width: '100%', 
-                        height: 'auto', 
-                        maxHeight: '300px',
-                        objectFit: 'contain', 
-                        borderRadius: '4px' 
-                      }}
-                    />
-                  </div>
-                )}
-
-                {/* 3. Verification Button Link (Only shows if verifyUrl exists) */}
-                {cert.verifyUrl && (
-                  <div style={{ marginTop: 'auto', textAlign: 'center' }}>
-                    <a 
-                      href={cert.verifyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        display: 'block',
-                        padding: '10px',
-                        backgroundColor: 'transparent',
-                        color: '#ff6b00',
-                        border: '1px solid #ff6b00',
-                        borderRadius: '4px',
-                        textDecoration: 'none',
-                        fontWeight: 'bold',
-                        fontSize: '0.9rem',
-                        transition: 'background-color 0.2s ease',
-                      }}
-                      onMouseOver={(e) => {
-                        e.currentTarget.style.backgroundColor = '#ff6b00';
-                        e.currentTarget.style.color = '#111';
-                      }}
-                      onMouseOut={(e) => {
-                        e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = '#ff6b00';
-                      }}
-                    >
-                      Verify Credential
-                    </a>
-                  </div>
-                )}
-
+      {/* Certifications Section */}
+      <div className="certifications-section">
+        <h3 className="certifications-title">
+          <FaAward className="award-icon" /> Industry Certifications
+        </h3>
+        
+        <div className="certifications-grid-resume">
+          {certifications.map((cert, index) => (
+            <div key={index} className="cert-card-resume">
+              <div className="cert-card-header">
+                <span className="cert-name-text">{cert.name}</span>
+                <span className="cert-issuer-text">{cert.issuer}</span>
               </div>
-            ))}
-          </div>
 
+              {cert.image && (
+                <div className="cert-image-box">
+                  <img
+                    src={cert.image}
+                    alt={`${cert.name} Certificate`}
+                    className="cert-img-elem"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                    }}
+                  />
+                </div>
+              )}
+
+              {cert.verifyUrl ? (
+                <a 
+                  href={cert.verifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cert-verify-link-btn"
+                >
+                  <span>Verify Credential</span>
+                  <FaExternalLinkAlt />
+                </a>
+              ) : (
+                <div className="cert-verified-label">
+                  <FaShieldAlt /> Verified Industry Credential
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-      )}
+      </div>
     </section>
   )
 }

@@ -1,15 +1,14 @@
-import { FaHeart } from 'react-icons/fa'
 import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <p>
-          Built with <FaHeart className="heart-icon" /> by <strong>Luqmantra</strong> in Malaysia
+    <footer className="resume-footer-bar">
+      <div className="resume-footer-content">
+        <p className="resume-footer-text">
+          Curriculum Vitae • <strong>Luqman TRA</strong> • Full-Stack Developer & Cybersecurity Specialist
         </p>
-        <p className="footer-copyright">
-          © {new Date().getFullYear()} All rights reserved
+        <p className="resume-footer-copy">
+          © {new Date().getFullYear()} Luqman TRA. Verified credentials and production experience.
         </p>
       </div>
     </footer>
@@ -17,4 +16,3 @@ const Footer = () => {
 }
 
 export default Footer
-

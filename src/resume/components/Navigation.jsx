@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { FaBars, FaTimes, FaArrowLeft } from 'react-icons/fa'
+import { FaBars, FaTimes, FaArrowLeft, FaFilePdf, FaHome } from 'react-icons/fa'
 import './Navigation.css'
 
 const Navigation = ({ activeSection, onNavigateToPortfolio }) => {
@@ -8,17 +8,18 @@ const Navigation = ({ activeSection, onNavigateToPortfolio }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      setScrolled(window.scrollY > 40)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const navItems = [
-    { id: 'about', label: 'About' },
+    { id: 'about', label: 'Summary' },
+    { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
-    { id: 'education', label: 'Education' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'education', label: 'Education & Certs' },
+    { id: 'projects', label: 'Projects' }
   ]
 
   const scrollToSection = (id) => {
@@ -31,48 +32,34 @@ const Navigation = ({ activeSection, onNavigateToPortfolio }) => {
 
   return (
     <>
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        <div className="nav-container">
-        <div className="nav-logo-section">
-  {onNavigateToPortfolio && (
-    <button 
-      className="back-to-portfolio-btn" 
-      onClick={onNavigateToPortfolio}
-      title="Back to Portfolio"
-    >
-      <FaArrowLeft />
-    </button>
-  )}
-  
-  {/* <a
-    href="#about"
-    className="nav-logo"
-    onClick={(e) => {
-      e.preventDefault()
-      scrollToSection('about')
-    }}
-  >
-    <img
-      src="/dp3.jpeg" // replace with your image path
-      alt="Luqman Hakim"
-      className="nav-profile-image"
-      onError={(e) => {
-        // fallback to initials if image fails
-        e.target.style.display = 'none';
-        e.target.nextElementSibling.style.display = 'inline';
-      }}
-    />
-    <span className="nav-logo-initials">LH</span>
-  </a> */}
-</div>
+      <nav className={`resume-nav-bar ${scrolled ? 'scrolled' : ''}`}>
+        <div className="resume-nav-wrapper">
+          {/* Left: Back to interactive portfolio */}
+          <div className="resume-nav-left">
+            {onNavigateToPortfolio && (
+              <button
+                className="resume-back-btn"
+                onClick={onNavigateToPortfolio}
+                title="Return to Interactive Portfolio"
+              >
+                <FaArrowLeft />
+                <span>Return to Portfolio</span>
+              </button>
+            )}
 
+            <div className="resume-badge-indicator">
+              <span className="doc-type-pill">Curriculum Vitae</span>
+              <span className="author-name">Luqman TRA</span>
+            </div>
+          </div>
 
-          <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+          {/* Center/Right Nav Links */}
+          <ul className="resume-desktop-nav-menu">
             {navItems.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className={activeSection === item.id ? 'active' : ''}
+                  className={`resume-menu-link ${activeSection === item.id ? 'active' : ''}`}
                   onClick={(e) => {
                     e.preventDefault()
                     scrollToSection(item.id)
@@ -84,23 +71,51 @@ const Navigation = ({ activeSection, onNavigateToPortfolio }) => {
             ))}
           </ul>
 
-          <button 
-            className={`nav-toggle ${isOpen ? 'active' : ''}`} 
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <FaTimes /> : <FaBars />}
-          </button>
+          {/* Quick PDF Action */}
+          <div className="resume-nav-actions">
+            <a
+              href="https://drive.google.com/file/d/1cz6mm-ChE5DdqSGheYWEP1LkTwuNu5P4/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-glow nav-cv-download-btn"
+              title="Download PDF Version"
+            >
+              <FaFilePdf />
+              <span>Download PDF</span>
+            </a>
+
+            <button
+              className="resume-nav-toggle-btn"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle CV navigation"
+            >
+              {isOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
         </div>
       </nav>
 
-      <div className={`mobile-overlay ${isOpen ? 'active' : ''}`} onClick={() => setIsOpen(false)}>
-        <div className="mobile-menu" onClick={(e) => e.stopPropagation()}>
-          <ul className="mobile-nav-menu">
+      {/* Mobile Drawer */}
+      <div className={`resume-mobile-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
+        <div className="resume-mobile-menu" onClick={(e) => e.stopPropagation()}>
+          <div className="mobile-menu-header">
+            <span className="mobile-menu-title">Resume Navigation</span>
+            <button className="mobile-close-btn" onClick={() => setIsOpen(false)}>
+              <FaTimes />
+            </button>
+          </div>
+
+          <ul className="resume-mobile-list">
             {onNavigateToPortfolio && (
               <li>
-                <button className="mobile-back-btn" onClick={onNavigateToPortfolio}>
-                  <FaArrowLeft /> Back to Portfolio
+                <button
+                  className="mobile-back-action-btn"
+                  onClick={() => {
+                    setIsOpen(false)
+                    onNavigateToPortfolio()
+                  }}
+                >
+                  <FaHome /> Return to Portfolio
                 </button>
               </li>
             )}
@@ -108,7 +123,7 @@ const Navigation = ({ activeSection, onNavigateToPortfolio }) => {
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className={activeSection === item.id ? 'active' : ''}
+                  className={`resume-mobile-link ${activeSection === item.id ? 'active' : ''}`}
                   onClick={(e) => {
                     e.preventDefault()
                     scrollToSection(item.id)
@@ -119,6 +134,15 @@ const Navigation = ({ activeSection, onNavigateToPortfolio }) => {
               </li>
             ))}
           </ul>
+
+          <a
+            href="https://drive.google.com/file/d/1cz6mm-ChE5DdqSGheYWEP1LkTwuNu5P4/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary mobile-cv-btn"
+          >
+            <FaFilePdf /> Download Official PDF
+          </a>
         </div>
       </div>
     </>
@@ -126,4 +150,3 @@ const Navigation = ({ activeSection, onNavigateToPortfolio }) => {
 }
 
 export default Navigation
-

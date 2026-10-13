@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <p>
-          Built with <FaHeart className="heart-icon" /> by <strong>Luqman Hakim</strong> in Malaysia
+          Built with <FaHeart className="heart-icon" /> by <strong>Luqman TRA</strong> in Malaysia
         </p>
         <p className="footer-copyright">
           © {new Date().getFullYear()} All rights reserved

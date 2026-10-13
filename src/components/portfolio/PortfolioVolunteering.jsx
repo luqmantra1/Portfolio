@@ -1,4 +1,5 @@
-import { useRef, useEffect } from 'react'
+import { useState } from 'react'
+import { FaHeart, FaCamera, FaTshirt, FaHandsHelping, FaTimes } from 'react-icons/fa'
 import './PortfolioVolunteering.css'
 
 const volunteeringImages = [
@@ -15,57 +16,92 @@ const volunteeringImages = [
 ]
 
 const PortfolioVolunteering = () => {
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.2 }
-    )
-
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current)
-    }
-  }, [])
+  const [activePhoto, setActivePhoto] = useState(null)
 
   return (
-    <section
-      id="volunteering"
-      className="portfolio-volunteering"
-      ref={sectionRef} // <-- fixed ref here
-    >
-      <div className="volunteering-container">
+    <section id="volunteering" className="portfolio-volunteering">
+      <div className="container">
+        {/* Section Header */}
         <div className="section-header">
-          <span className="section-number">04</span>
+          <div className="section-pill">
+            <FaHandsHelping />
+            <span>Community Leadership</span>
+          </div>
           <h2 className="section-title">
-            Volunteering <span className="highlight">Experience</span>
+            Volunteering & <span className="text-gradient">Initiatives</span>
           </h2>
+          <p className="section-subtitle">
+            Leading media and branding operations for university community programs and tech initiatives.
+          </p>
         </div>
 
-        <p className="volunteering-intro">
-        Led the Media Team to enhance TechCrafters’ online presence through strategic social media content creation and audience engagement. 
-        Captured high-quality event photography using a DSLR camera for promotional and archival purposes, ensuring the event’s key moments were professionally documented. 
-        Designed official event merchandise, including t-shirts and promotional materials, 
-        maintaining consistent branding across all outputs. Additionally, coordinated fundraising initiatives, 
-        such as car boot sales and car wash campaigns, to support event logistics and operations, 
-        contributing to a smooth and successful event execution.
-        </p>
+        {/* Narrative Card */}
+        <div className="volunteering-narrative-card glass-panel">
+          <div className="volunteering-header-info">
+            <div className="vol-title-block">
+              <h3 className="vol-event-title">TechCrafters Event (SULAM Program)</h3>
+              <span className="vol-role-badge">Media Team Lead & Event Logistics</span>
+            </div>
+          </div>
 
+          <p className="volunteering-intro">
+            Spearheaded the media and creative communications division for TechCrafters under the university SULAM initiative. 
+            Captured professional event photography with DSLR gear for official archival documentation and promotional collateral. 
+            Designed official branded merchandise including event shirts and marketing banners, while coordinating fundraising 
+            initiatives (car boot sales and charity car wash campaigns) to support logistical operations.
+          </p>
+
+          <div className="volunteering-pillars-row">
+            <div className="vol-pill-item">
+              <FaCamera className="vol-pill-icon" />
+              <span>Media & DSLR Photography</span>
+            </div>
+            <div className="vol-pill-item">
+              <FaTshirt className="vol-pill-icon" />
+              <span>Brand & Merchandise Design</span>
+            </div>
+            <div className="vol-pill-item">
+              <FaHandsHelping className="vol-pill-icon" />
+              <span>Community Logistics & Fundraising</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Photo Gallery Grid */}
         <div className="volunteering-gallery">
           {volunteeringImages.map((src, index) => (
-            <div key={index} className="gallery-item">
-              <img src={src} alt={`Volunteering ${index + 1}`} />
+            <div 
+              key={index} 
+              className="gallery-item-card"
+              onClick={() => setActivePhoto(src)}
+            >
+              <img 
+                src={src} 
+                alt={`TechCrafters volunteering moment ${index + 1}`} 
+                className="gallery-photo"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                }}
+              />
+              <div className="gallery-hover-overlay">
+                <span>View Full Photo</span>
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      {activePhoto && (
+        <div className="photo-lightbox-backdrop" onClick={() => setActivePhoto(null)}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-close-btn" onClick={() => setActivePhoto(null)}>
+              <FaTimes />
+            </button>
+            <img src={activePhoto} alt="Volunteering Preview" className="lightbox-img" />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

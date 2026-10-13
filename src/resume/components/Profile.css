@@ -1,390 +1,362 @@
-.profile {
-  animation: fadeIn 0.6s ease-out;
-}
-
-.profile-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.profile-avatar {
-  margin-bottom: 1rem;
-}
-.avatar-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #fff;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-}
-
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.avatar-circle span {
-  position: absolute;
-}
-
-.avatar-circle[data-tooltip]:hover::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: -30px;
-  background: #333;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 3px 6px;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-
-.avatar-circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: var(--accent-gradient);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--bg-primary);
-  border: 3px solid var(--bg-secondary);
-  box-shadow: 0 6px 24px rgba(255, 107, 53, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.avatar-circle:hover {
-  transform: scale(1.05);
-}
-
-.profile-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.4rem;
-  line-height: 1.2;
-}
-
-.profile-title {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
-  font-weight: 500;
-}
-
-.profile-location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.profile-section {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.profile-section:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-.profile-section-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--accent-primary);
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-.contact-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.contact-item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  color: var(--text-secondary);
-  font-size: 1.25rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 50%;
-  background: rgba(255, 107, 53, 0.1);
-  border: 2px solid rgba(255, 107, 53, 0.2);
-  text-decoration: none;
-}
-
-.contact-item:hover {
-  color: var(--accent-primary);
-  background: rgba(255, 107, 53, 0.2);
-  border-color: var(--accent-primary);
-  transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
-}
-
-.contact-item svg {
-  color: inherit;
-  transition: color 0.3s ease;
-}
-
-/* Tooltip */
-.contact-item::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%) translateY(-5px);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 107, 53, 0.3);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-}
-
-.contact-item::after {
-  content: '';
-  position: absolute;
-  bottom: calc(100% + 5px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid var(--bg-card);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1001;
-}
-
-.contact-item:hover::before,
-.contact-item:hover::after {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-.languages-list {
+.resume-executive-header {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 2rem;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
 }
 
-.language-item {
+.resume-executive-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+}
+
+/* Header Main (Avatar + Info + CTA) */
+.resume-header-main {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.4rem 0;
-  font-size: 0.9rem;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.language-name {
-  color: var(--text-primary);
-  font-weight: 500;
+.profile-avatar-wrapper {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  flex-shrink: 0;
 }
 
-.language-level {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  font-style: italic;
-}
-
-.btn-resume {
+.avatar-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 3.5px;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+}
+
+.avatar-photo {
   width: 100%;
-  padding: 0.75rem 1.25rem;
-  background: var(--accent-gradient);
-  color: var(--bg-primary);
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  background: #0f172a;
+  display: block;
+}
+
+.profile-active-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  border: 3px solid #0c1220;
+  box-shadow: 0 0 10px var(--accent-emerald);
+}
+
+/* Identity */
+.profile-identity {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.profile-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #34d399;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+}
+
+.status-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+}
+
+.resume-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0.15rem 0;
+}
+
+.resume-role-tag {
+  font-size: 1.05rem;
+  color: var(--accent-cyan);
   font-weight: 600;
-  font-size: 0.9rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  letter-spacing: -0.01em;
+}
+
+.resume-location-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.loc-icon {
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+}
+
+/* Languages */
+.profile-languages-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.lang-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.globe-icon {
+  color: var(--accent-cyan);
+}
+
+.lang-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.lang-pill {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid var(--border-subtle);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.lang-pill strong {
+  color: #ffffff;
+}
+
+/* Header Actions */
+.profile-header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.resume-download-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.9rem 1.7rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+  white-space: nowrap;
+}
+
+/* Contact Bar */
+.profile-contact-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.contact-card-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: rgba(22, 33, 58, 0.45);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
   text-decoration: none;
+  transition: all 0.25s ease;
 }
 
-.btn-resume:hover {
+.contact-card-item:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 6px 15px -3px rgba(0, 0, 0, 0.4), 0 0 15px rgba(56, 189, 248, 0.15);
 }
 
-.btn-resume svg {
-  font-size: 1.1rem;
+.contact-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  font-size: 1rem;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .profile-header {
-    text-align: center;
+.contact-card-item:hover .contact-icon-box {
+  background: var(--accent-gradient);
+  color: #0c1220;
+}
+
+.contact-meta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.contact-value {
+  font-size: 0.82rem;
+  color: #ffffff;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .resume-executive-header {
+    padding: 1.8rem 1.5rem;
   }
 
-  .avatar-circle {
-    margin: 0 auto 1.5rem;
+  .resume-header-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
   }
 
-  .profile-location {
+  .profile-identity {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .profile-header-actions {
+    width: 100%;
+  }
+
+  .resume-download-cta {
+    width: 100%;
     justify-content: center;
   }
 
-  .contact-list {
-    justify-content: center;
+  .resume-name {
+    font-size: 1.8rem;
   }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .profile {
-    padding: 0;
+@media (max-width: 600px) {
+  .resume-executive-header {
+    padding: 1.4rem 1rem;
+    gap: 1.4rem;
+    border-radius: var(--radius-md);
   }
 
-  .profile-header {
-    margin-bottom: 1.25rem;
-    padding-bottom: 1.25rem;
+  .profile-avatar-wrapper {
+    width: 86px;
+    height: 86px;
   }
 
-  .avatar-circle {
-    width: 90px;
-    height: 90px;
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
+  .profile-identity {
+    min-width: 0;
+    width: 100%;
   }
 
-  .profile-name {
-    font-size: 1.35rem;
-    margin-bottom: 0.35rem;
+  .resume-name {
+    font-size: 1.55rem;
   }
 
-  .profile-title {
-    font-size: 0.85rem;
-    margin-bottom: 0.65rem;
+  .resume-role-tag {
+    font-size: 0.92rem;
   }
 
-  .profile-location {
-    font-size: 0.85rem;
+  .resume-location-badge {
+    font-size: 0.78rem;
   }
 
-  .profile-section {
-    margin-bottom: 1.25rem;
-    padding-bottom: 1.25rem;
+  .profile-status-pill {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
   }
 
-  .profile-section-title {
-    font-size: 0.9rem;
-    margin-bottom: 0.875rem;
+  .profile-languages-bar {
+    gap: 0.45rem;
   }
 
-  .contact-list {
-    gap: 0.875rem;
+  .lang-pills {
+    gap: 0.35rem;
   }
 
-  .contact-item {
-    width: 42px;
-    height: 42px;
-    font-size: 1.15rem;
+  .lang-pill {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem;
   }
 
-  .languages-list {
-    gap: 0.4rem;
+  .profile-contact-bar {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding-top: 1.2rem;
   }
 
-  .language-item {
-    padding: 0.35rem 0;
-    font-size: 0.85rem;
+  .contact-card-item {
+    padding: 0.7rem 0.85rem;
   }
 
-  .language-level {
-    font-size: 0.75rem;
-  }
-
-  .btn-resume {
-    padding: 0.65rem 1.15rem;
-    font-size: 0.85rem;
-    margin-top: 0.4rem;
+  .resume-download-cta {
+    font-size: 0.88rem;
+    padding: 0.75rem 1rem;
   }
 }
-
-/* Small Mobile */
-@media (max-width: 480px) {
-  .profile-header {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .avatar-circle {
-    width: 80px;
-    height: 80px;
-    font-size: 1.5rem;
-  }
-
-  .profile-name {
-    font-size: 1.25rem;
-  }
-
-  .profile-title {
-    font-size: 0.8rem;
-  }
-
-  .profile-location {
-    font-size: 0.8rem;
-  }
-
-  .profile-section {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .contact-item {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-  }
-
-  .language-item {
-    font-size: 0.8rem;
-  }
-
-  .btn-resume {
-    padding: 0.6rem 1rem;
-    font-size: 0.8rem;
-  }
-}
-

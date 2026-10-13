@@ -1,100 +1,88 @@
 import { useState, useEffect } from 'react'
+import { FaShieldAlt, FaServer, FaCheckCircle, FaForward } from 'react-icons/fa'
 import './LoadingScreen.css'
 
 const LoadingScreen = ({ onComplete }) => {
   const [progress, setProgress] = useState(0)
-  const [currentText, setCurrentText] = useState('Initializing security protocols...')
-  const [showContent, setShowContent] = useState(false)
+  const [statusText, setStatusText] = useState('Initializing secure environment...')
 
-  const loadingMessages = [
-    'Initializing security protocols...',
-    'Scanning for vulnerabilities...',
-    'Establishing secure connection...',
-    'Loading encrypted data...',
-    'Verifying authentication...',
-    'System ready!'
+  const steps = [
+    { at: 15, text: 'Verifying enterprise security credentials...' },
+    { at: 40, text: 'Connecting to Linux server infrastructure...' },
+    { at: 70, text: 'Validating CCNA, Cloud+ & ESET certifications...' },
+    { at: 90, text: 'Deploying Luqman TRA portfolio services...' },
+    { at: 100, text: 'Systems operational & ready.' }
   ]
 
   useEffect(() => {
-    setShowContent(true)
-    
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          clearInterval(interval)
-          setTimeout(() => {
-            onComplete()
-          }, 500)
+          clearInterval(timer)
+          setTimeout(() => onComplete(), 300)
           return 100
         }
-        return prev + 2
-      })
-    }, 50)
-
-    const messageInterval = setInterval(() => {
-      setCurrentText((prev) => {
-        const currentIndex = loadingMessages.findIndex(msg => msg === prev)
-        if (currentIndex < loadingMessages.length - 1) {
-          return loadingMessages[currentIndex + 1]
+        const next = prev + 4
+        const matched = steps.find((s) => s.at <= next && s.at > prev)
+        if (matched) {
+          setStatusText(matched.text)
         }
-        return prev
+        return next
       })
-    }, 800)
+    }, 28)
 
-    return () => {
-      clearInterval(interval)
-      clearInterval(messageInterval)
-    }
-  }, [])
+    return () => clearInterval(timer)
+  }, [onComplete])
 
   return (
-    <div className={`loading-screen ${showContent ? 'active' : ''}`}>
-      <div className="loading-container">
-        <div className="cyber-grid"></div>
-        <div className="loading-content">
-          <div className="hacker-text">
-            <span className="cyber-title">&gt; SYSTEM_INIT</span>
-            <span className="cyber-subtitle">CYBER_SECURITY_PORTFOLIO.exe</span>
+    <div className="loading-screen">
+      <div className="loading-bg-effects">
+        <div className="loading-radial-glow"></div>
+      </div>
+
+      <div className="loading-card glass-panel">
+        <div className="loading-header">
+          <div className="loading-brand">
+            <span className="brand-badge">
+              <FaShieldAlt className="shield-icon" />
+              SYSTEM_BOOT
+            </span>
+            <span className="brand-version">v2.6 Enterprise</span>
           </div>
-          
-          <div className="loading-terminal">
-            <div className="terminal-header">
-              <span className="terminal-dot red"></span>
-              <span className="terminal-dot yellow"></span>
-              <span className="terminal-dot green"></span>
-              <span className="terminal-title">Terminal</span>
-            </div>
-            <div className="terminal-body">
-              <div className="terminal-line">
-                <span className="terminal-prompt">$</span>
-                <span className="terminal-command">./load_portfolio.sh</span>
-              </div>
-              <div className="terminal-line">
-                <span className="terminal-output">{currentText}</span>
-              </div>
-              <div className="terminal-line">
-                <span className="terminal-progress">
-                  [{'>'.repeat(Math.floor(progress / 5))}{' '.repeat(20 - Math.floor(progress / 5))}]
-                </span>
-                <span className="terminal-percent">{progress}%</span>
-              </div>
-            </div>
+          <button className="skip-btn" onClick={onComplete} title="Skip loading">
+            Skip <FaForward />
+          </button>
+        </div>
+
+        <div className="loading-center">
+          <div className="identity-pill">
+            <span className="status-dot"></span>
+            <span>Luqman TRA Portfolio Environment</span>
           </div>
 
-          <div className="progress-bar-container">
-            <div className="progress-bar" style={{ width: `${progress}%` }}></div>
-            <div className="progress-glow" style={{ left: `${progress}%` }}></div>
+          <div className="progress-value">{progress}%</div>
+
+          <div className="progress-track">
+            <div className="progress-fill" style={{ width: `${progress}%` }}></div>
           </div>
 
-          <div className="loading-stats">
-            <div className="stat-item">
-              <span className="stat-label">Encryption:</span>
-              <span className="stat-value">AES-256</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-label">Status:</span>
-              <span className="stat-value">{progress < 100 ? 'LOADING' : 'READY'}</span>
-            </div>
+          <p className="loading-status-text code-font">
+            <span className="prompt-sym">&gt;</span> {statusText}
+          </p>
+        </div>
+
+        <div className="loading-footer">
+          <div className="footer-metric">
+            <span className="metric-label">Specialization</span>
+            <span className="metric-val">Full-Stack & Security</span>
+          </div>
+          <div className="footer-metric">
+            <span className="metric-label">Status</span>
+            <span className="metric-val status-ok">Open for Projects</span>
+          </div>
+          <div className="footer-metric">
+            <span className="metric-label">Security</span>
+            <span className="metric-val status-ok">ESET & Checkmk OK</span>
           </div>
         </div>
       </div>
@@ -103,4 +91,3 @@ const LoadingScreen = ({ onComplete }) => {
 }
 
 export default LoadingScreen
-

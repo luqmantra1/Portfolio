@@ -1,205 +1,99 @@
+/* Modern Executive Resume Styling - Single Column Layout */
 .App {
   min-height: 100vh;
   background: var(--bg-primary);
+  color: var(--text-primary);
   position: relative;
+  overflow-x: hidden;
 }
-
 
 .resume-container {
-  display: flex;
-  max-width: 1400px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding-top: 80px;
-  min-height: calc(100vh - 80px);
-}
-
-.resume-sidebar {
-  width: var(--sidebar-width);
-  min-width: var(--sidebar-width);
-  background: var(--bg-secondary);
-  border-right: 1px solid var(--border-color);
-  padding: 2rem;
-  position: sticky;
-  top: 80px;
-  height: fit-content;
-  max-height: calc(100vh - 80px);
-  z-index: 1;
+  padding: calc(var(--header-height) + 2.5rem) 1.75rem 5rem;
+  min-height: calc(100vh - var(--header-height));
+  position: relative;
+  z-index: 2;
 }
 
 .resume-main {
-  flex: 1;
-  padding: 2rem 3rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
 }
 
 /* Section Styling */
-section {
-  margin-bottom: 4rem;
-  scroll-margin-top: 100px;
+.resume-main section {
+  width: 100%;
+  scroll-margin-top: calc(var(--header-height) + 35px);
 }
 
-.section-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 3px solid var(--accent-primary);
-  display: inline-block;
+.resume-main .section-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  padding-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   position: relative;
+  letter-spacing: -0.02em;
 }
 
-.section-title::after {
+.resume-main .section-title::after {
   content: '';
   position: absolute;
-  bottom: -3px;
+  bottom: 0;
   left: 0;
-  width: 60px;
+  width: 50px;
   height: 3px;
-  background: var(--accent-secondary);
+  background: var(--accent-gradient);
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Responsive */
+@media (max-width: 900px) {
   .resume-container {
-    flex-direction: column;
-    max-width: 100%;
-  }
-
-  .resume-sidebar {
-    width: 100%;
-    position: relative;
-    top: 0;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-    padding: 2rem;
-    max-height: none;
-    min-width: unset;
+    padding: calc(var(--header-height) + 1.8rem) 1.25rem 4rem;
   }
 
   .resume-main {
-    padding: 2rem 1.5rem;
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
+    gap: 3.5rem;
   }
 
-  .nav-container {
-    padding: 1rem 1.5rem;
-  }
-
-  section {
-    margin-bottom: 3.5rem;
-  }
-
-  .section-title {
+  .resume-main .section-title {
     font-size: 1.6rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .resume-container {
-    padding-top: 70px;
-    max-width: 100%;
-  }
-
-  .resume-sidebar {
-    padding: 1.5rem;
+    padding: calc(var(--header-height) + 1.2rem) 1rem 3rem;
   }
 
   .resume-main {
-    padding: 1.5rem 1rem;
-    width: 100%;
+    gap: 2.8rem;
   }
 
-  section {
-    margin-bottom: 3rem;
-    scroll-margin-top: 80px;
-  }
-
-  .section-title {
+  .resume-main .section-title {
     font-size: 1.4rem;
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.65rem;
-  }
-
-  .section-title::after {
-    width: 50px;
-    height: 2px;
-  }
-
-  .nav-container {
-    padding: 1rem;
-  }
-
-  .nav-logo-section {
-    gap: 0.75rem;
-  }
-
-  .back-to-portfolio-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-  }
-
-  .nav-logo {
-    font-size: 1.25rem;
-  }
-
-  .nav-menu {
-    gap: 1.5rem;
-  }
-
-  .nav-menu a {
-    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .resume-container {
-    padding-top: 65px;
-  }
-
-  .resume-sidebar {
-    padding: 1rem;
+    padding: calc(var(--header-height) + 0.9rem) 0.75rem 2.5rem;
   }
 
   .resume-main {
-    padding: 1rem 0.75rem;
+    gap: 2.2rem;
   }
 
-  section {
-    margin-bottom: 2.5rem;
-    scroll-margin-top: 75px;
-  }
-
-  .section-title {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .section-title::after {
-    width: 40px;
-    height: 2px;
-  }
-
-  .nav-container {
-    padding: 0.75rem;
-  }
-
-  .nav-logo-section {
-    gap: 0.5rem;
-  }
-
-  .back-to-portfolio-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 0.8rem;
-  }
-
-  .nav-logo {
-    font-size: 1.1rem;
+  .resume-main .section-title {
+    font-size: 1.28rem;
+    margin-bottom: 1.4rem;
   }
 }
