@@ -19,7 +19,7 @@ const About = () => {
 
           <div className="about-highlights">
             <div className="highlight-item">
-              <span className="highlight-number">3+</span>
+              <span className="highlight-number">5+</span>
               <span className="highlight-label">Years Experience</span>
             </div>
             <div className="highlight-item">
