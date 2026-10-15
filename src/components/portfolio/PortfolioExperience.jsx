@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { 
-  FaBriefcase, 
-  FaCalendarAlt, 
-  FaMapMarkerAlt, 
-  FaCheckCircle, 
-  FaServer, 
-  FaShieldAlt, 
-  FaCode, 
-  FaLaptopCode 
+import {
+  FaBriefcase,
+  FaCalendarAlt,
+  FaMapMarkerAlt,
+  FaCheckCircle,
+  FaServer,
+  FaShieldAlt,
+  FaCode,
+  FaLaptopCode
 } from 'react-icons/fa'
 import './PortfolioExperience.css'
 
@@ -43,7 +43,7 @@ const PortfolioExperience = () => {
       period: 'Apr 2023 - Present',
       type: 'Independent / Startup',
       category: 'software',
-      isCurrent: true,
+      isCurrent: false,
       icon: <FaLaptopCode />,
       summary: 'Co-founded an independent IT solutions venture delivering bespoke web, mobile, and intelligent data systems.',
       achievements: [
@@ -165,32 +165,32 @@ const PortfolioExperience = () => {
             Professional <span className="text-gradient">Experience</span>
           </h2>
           <p className="section-subtitle">
-            Hands-on technical roles spanning enterprise systems administration, cyber defense, 
+            Hands-on technical roles spanning enterprise systems administration, cyber defense,
             and full-stack software development.
           </p>
         </div>
 
         {/* Filter Tabs */}
         <div className="experience-filter-tabs">
-          <button 
+          <button
             className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
             onClick={() => setFilter('all')}
           >
             All Experiences ({experiences.length})
           </button>
-          <button 
+          <button
             className={`filter-btn ${filter === 'enterprise' ? 'active' : ''}`}
             onClick={() => setFilter('enterprise')}
           >
             Enterprise & Systems
           </button>
-          <button 
+          <button
             className={`filter-btn ${filter === 'software' ? 'active' : ''}`}
             onClick={() => setFilter('software')}
           >
             Software Engineering
           </button>
-          <button 
+          <button
             className={`filter-btn ${filter === 'freelance' ? 'active' : ''}`}
             onClick={() => setFilter('freelance')}
           >
@@ -201,8 +201,8 @@ const PortfolioExperience = () => {
         {/* Experience Timeline Cards */}
         <div className="experience-timeline-container">
           {filtered.map((exp, index) => (
-            <div 
-              key={exp.id} 
+            <div
+              key={exp.id}
               className={`experience-card glass-panel ${exp.isCurrent ? 'current-role-highlight' : ''}`}
             >
               {/* Card Header */}

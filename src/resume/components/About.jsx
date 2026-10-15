@@ -7,13 +7,13 @@ const About = () => {
       <div className="about-content">
         <div className="about-text">
           <p className="about-intro">
-            IT professional with hands-on experience bridging software development and server infrastructure. 
-            Skilled in building and supporting data-driven applications using Python and PHP, with practical experience 
+            IT professional with hands-on experience bridging software development and server infrastructure.
+            Skilled in building and supporting data-driven applications using Python and PHP, with practical experience
             integrating frontend interfaces with backend logic.
           </p>
           <p>
-            Brings a strong foundation in administering enterprise Linux environments, troubleshooting technical escalations, 
-            and deploying system updates. A collaborative problem-solver who combines networking knowledge with analytical 
+            Brings a strong foundation in administering enterprise Linux environments, troubleshooting technical escalations,
+            and deploying system updates. A collaborative problem-solver who combines networking knowledge with analytical
             programming to reliably support and maintain core IT operations and software solutions.
           </p>
 
@@ -23,7 +23,7 @@ const About = () => {
               <span className="highlight-label">Years Experience</span>
             </div>
             <div className="highlight-item">
-              <span className="highlight-number">8+</span>
+              <span className="highlight-number">9+</span>
               <span className="highlight-label">Projects Completed</span>
             </div>
             <div className="highlight-item">

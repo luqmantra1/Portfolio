@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import { 
-  FaEnvelope, 
-  FaPhone, 
-  FaMapMarkerAlt, 
-  FaLinkedin, 
-  FaGithub, 
-  FaAward, 
-  FaPaperPlane, 
-  FaCheckCircle, 
-  FaShieldAlt 
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGithub,
+  FaAward,
+  FaPaperPlane,
+  FaCheckCircle,
+  FaShieldAlt
 } from 'react-icons/fa'
 import './PortfolioContact.css'
 
@@ -47,7 +47,7 @@ const PortfolioContact = () => {
             Let's Build <span className="text-gradient">Something Exceptional</span>
           </h2>
           <p className="section-subtitle">
-            Whether you need custom web app development, enterprise Linux support, or security consulting, 
+            Whether you need custom web app development, enterprise Linux support, or security consulting,
             I am always ready to collaborate on impactful engineering projects.
           </p>
         </div>
@@ -89,7 +89,7 @@ const PortfolioContact = () => {
                 </div>
                 <div className="channel-info">
                   <span className="channel-label">Location</span>
-                  <span className="channel-value">Petaling Jaya & Ampang, Malaysia</span>
+                  <span className="channel-value">Kuala Lumpur, Malaysia</span>
                 </div>
               </div>
             </div>
@@ -98,27 +98,27 @@ const PortfolioContact = () => {
             <div className="social-profiles-box">
               <span className="profiles-label">Professional Profiles & Verified Badges:</span>
               <div className="profiles-row">
-                <a 
-                  href="https://www.linkedin.com/in/luqmantra" 
-                  target="_blank" 
+                <a
+                  href="https://www.linkedin.com/in/luqmantra"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="profile-link-btn"
                   title="LinkedIn Profile"
                 >
                   <FaLinkedin /> LinkedIn
                 </a>
-                <a 
-                  href="https://github.com/luqmantra1" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/luqmantra1"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="profile-link-btn"
                   title="GitHub Profile"
                 >
                   <FaGithub /> GitHub
                 </a>
-                <a 
-                  href="https://www.credly.com/users/luqman-tra/badges/credly" 
-                  target="_blank" 
+                <a
+                  href="https://www.credly.com/users/luqman-tra/badges/credly"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="profile-link-btn"
                   title="Credly Verified Credentials"

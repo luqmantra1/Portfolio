@@ -10,25 +10,7 @@ const Projects = () => {
       type: 'Startup Venture',
       featured: true,
       live: null,
-      image: null
-    },
-    {
-      title: 'Anime Search Application',
-      description: 'Engineered a dynamic Single Page Application (SPA) using React.js to asynchronously consume the YouTube Data API, implementing real-time data fetching, state management, and optimized DOM rendering for video metadata.',
-      tech: ['React.js', 'RESTful API', 'YouTube Data API', 'State Management', 'SPA'],
-      type: 'Single Page Application (SPA)',
-      featured: true,
-      live: null,
-      image: null
-    },
-    {
-      title: 'Paws & Preferences (Adoption Matcher)',
-      description: 'Developed a data-driven matching engine utilizing modular React Component Architecture; implemented client-side filtering algorithms and efficient state management to process and render datasets without server-side page reloads.',
-      tech: ['React.js', 'Client-Side Algorithms', 'Component Architecture', 'State Management'],
-      type: 'Web Application',
-      featured: true,
-      live: null,
-      image: null
+      image: '/soluna.png'
     },
     {
       title: 'Professional Portfolio (Luqmantra.my)',
@@ -37,8 +19,8 @@ const Projects = () => {
       type: 'Personal Portfolio',
       featured: true,
       live: 'https://luqmantra.my',
-      github: 'https://github.com/luqmantra1/Portfolio',
-      image: '/portfolio.png'
+      github: null,
+      image: '/portfoliolatest.png'
     },
     {
       title: 'Freshwater Prawn AI Gender Detection',
@@ -84,7 +66,25 @@ const Projects = () => {
       featured: false,
       live: null,
       image: '/sulam1.jpeg'
-    }
+    },
+    {
+      title: 'Anime Search Application',
+      description: 'Engineered a dynamic Single Page Application (SPA) using React.js to asynchronously consume the YouTube Data API, implementing real-time data fetching, state management, and optimized DOM rendering for video metadata.',
+      tech: ['React.js', 'RESTful API', 'YouTube Data API', 'State Management', 'SPA'],
+      type: 'Single Page Application (SPA)',
+      featured: true,
+      live: null,
+      image: null
+    },
+    {
+      title: 'Paws & Preferences (Adoption Matcher)',
+      description: 'Developed a data-driven matching engine utilizing modular React Component Architecture; implemented client-side filtering algorithms and efficient state management to process and render datasets without server-side page reloads.',
+      tech: ['React.js', 'Client-Side Algorithms', 'Component Architecture', 'State Management'],
+      type: 'Web Application',
+      featured: true,
+      live: null,
+      image: null
+    },
   ]
 
   return (

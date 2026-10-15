@@ -239,7 +239,7 @@ const PortfolioHero = () => {
                     <span className="company-tag">Independent IT Consultant</span>
                   </p>
                   <div className="profile-compact-location">
-                    <span className="location-dot"></span> Ampang & Petaling Jaya, Malaysia
+                    <span className="location-dot"></span> Kuala Lumpur, Malaysia
                   </div>
                 </div>
               </div>

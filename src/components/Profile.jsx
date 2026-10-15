@@ -29,7 +29,7 @@ const Profile = () => {
         <p className="profile-title">Cyber Security & Software Developer</p>
         <div className="profile-location">
           <FaMapMarkerAlt />
-          <span>Ampang, Selangor, Malaysia</span>
+          <span>Kuala Lumpur, Malaysia</span>
         </div>
       </div>
 

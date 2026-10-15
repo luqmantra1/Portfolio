@@ -34,7 +34,7 @@ const Profile = () => {
 
           <div className="resume-location-badge">
             <FaMapMarkerAlt className="loc-icon" />
-            <span>Ampang & Petaling Jaya, Selangor / Kuala Lumpur, Malaysia</span>
+            <span>Kuala Lumpur, Malaysia</span>
           </div>
 
           {/* Languages Row */}

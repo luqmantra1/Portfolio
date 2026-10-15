@@ -15,6 +15,7 @@ import {
   FaTag
 } from 'react-icons/fa'
 import './PortfolioServicesPricing.css'
+import CountryCodeSelect from './CountryCodeSelect'
 
 const PortfolioServicesPricing = () => {
   const [selectedPlan, setSelectedPlan] = useState(null)
@@ -23,6 +24,7 @@ const PortfolioServicesPricing = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    countryCode: '+60',
     phone: '',
     message: ''
   })
@@ -106,6 +108,13 @@ const PortfolioServicesPricing = () => {
     setSelectedPlan(null)
   }
 
+  const getFormattedPhone = () => {
+    if (!formData.phone || !formData.phone.trim()) return 'N/A'
+    const trimmed = formData.phone.trim()
+    if (trimmed.startsWith('+')) return trimmed
+    return `${formData.countryCode} ${trimmed}`
+  }
+
   const generateEmailContent = () => {
     const subject = `[Quotation Request] ${selectedPlan.name} Package (${selectedPlan.priceMYR}) - ${formData.name || 'New Client'}`
     const body =
@@ -122,7 +131,7 @@ Estimated Timeline: ${selectedPlan.timeline}
 Client Details:
 Name / Company: ${formData.name || 'N/A'}
 Email: ${formData.email || 'N/A'}
-Phone / WhatsApp: ${formData.phone || 'N/A'}
+Phone / WhatsApp: ${getFormattedPhone()}
 
 Project Requirements & Scope:
 ${formData.message || 'Please provide quotation details and availability.'}
@@ -141,7 +150,9 @@ ${formData.name || 'Prospective Client'}`
   }
 
   const handleWhatsAppInquiry = () => {
-    const text = `Hi Luqman! I'm interested in your *${selectedPlan.name} Package (${selectedPlan.priceMYR})* for freelance web & IT services. My name is ${formData.name || 'a prospective client'}. Could we discuss details?`
+    const formattedPhone = getFormattedPhone()
+    const contactInfo = formattedPhone !== 'N/A' ? ` My contact number is ${formattedPhone}.` : ''
+    const text = `Hi Luqman! I'm interested in your *${selectedPlan.name} Package (${selectedPlan.priceMYR})* for freelance web & IT services. My name is ${formData.name || 'a prospective client'}.${contactInfo} Could we discuss details?`
     window.open(`https://wa.me/60175337009?text=${encodeURIComponent(text)}`, '_blank')
   }
 
@@ -337,12 +348,13 @@ ${formData.name || 'Prospective Client'}`
                   </div>
                   <div className="form-group">
                     <label htmlFor="inquiry-phone">Phone / WhatsApp (Optional)</label>
-                    <input
-                      id="inquiry-phone"
-                      type="text"
-                      placeholder="e.g. +60 12-345 6789"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    <CountryCodeSelect
+                      selectedDialCode={formData.countryCode}
+                      onSelectCountry={(dialCode) => setFormData((prev) => ({ ...prev, countryCode: dialCode }))}
+                      phoneNumber={formData.phone}
+                      onPhoneNumberChange={(phone) => setFormData((prev) => ({ ...prev, phone }))}
+                      inputId="inquiry-phone"
+                      inputPlaceholder={formData.countryCode === '+60' ? 'e.g. 12-345 6789' : 'e.g. 123 456 7890'}
                     />
                   </div>
                 </div>
