@@ -141,7 +141,7 @@ const PortfolioHero = () => {
             {/* Quick Metrics Bar */}
             <div className="hero-metrics-bar">
               <div className="metric-box">
-                <span className="metric-number">3+</span>
+                <span className="metric-number">5+</span>
                 <span className="metric-label">Years IT & Dev Experience</span>
               </div>
               <div className="metric-divider"></div>
