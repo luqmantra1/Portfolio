@@ -106,7 +106,7 @@ const PortfolioNav = ({ activeSection, onNavigateToResume }) => {
               title="View Freelance Services & Quotation"
             >
               <FaRocket className="btn-icon" />
-              <span>Hire Me</span>
+              <span>Get Quotation</span>
             </button>
 
             {/* Mobile Toggle Button */}
