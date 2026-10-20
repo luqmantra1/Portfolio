@@ -7,6 +7,19 @@ const PortfolioProjects = () => {
 
   const projects = [
     {
+      id: 'majlis-wedding',
+      title: 'Majlis – Wedding Planner Platform',
+      category: 'web',
+      tag: 'Next.js & Neon Stack',
+      client: 'Independent Side Project',
+      description: 'Architected and built a modern full-stack wedding planning platform utilizing Next.js and Neon serverless PostgreSQL, deployed on Vercel. Features interactive budget tracking (Nikah & Sanding allocations), real-time checklist task management, guest RSVP monitoring, venue proposals, and digital invitation cards.',
+      image: '/wedding_planner.png',
+      tech: ['Next.js', 'Neon (PostgreSQL)', 'Vercel', 'React', 'Budget Engine', 'Responsive UI/UX'],
+      featured: true,
+      github: null,
+      live: null
+    },
+    {
       id: 'soluna-ent',
       title: 'Soluna Ent Corporate Website',
       category: 'web',

@@ -17,7 +17,7 @@ import './PortfolioHero.css'
 
 const PortfolioHero = () => {
   const roles = [
-    'Full-Stack Developer (Laravel, React, Astro)',
+    'Full-Stack Developer (Next.js, Laravel, React)',
     'Cybersecurity & Systems Specialist',
     'Enterprise Linux Administrator',
     'Independent IT Solutions Specialist'
@@ -107,7 +107,7 @@ const PortfolioHero = () => {
               degree in <strong>Cyber Security from UPTM</strong>. I specialize in administering
               mission-critical <strong>Linux server infrastructure</strong> (including hospital blood
               bank system deployments), enterprise endpoint protection (<strong>ESET, Checkmk, JumpServer</strong>),
-              and crafting high-performance, secure web applications with <strong>Laravel, React, Astro</strong>, and <strong>Docker</strong>.
+              and crafting high-performance, secure web applications with <strong>Next.js, React, Laravel</strong>, and <strong>Docker</strong>.
             </p>
 
             {/* Call to Actions */}

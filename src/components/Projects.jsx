@@ -4,6 +4,13 @@ import './Projects.css'
 const Projects = () => {
   const projects = [
     {
+      title: 'Majlis – Wedding Planner Platform',
+      description: 'Architected and built a modern full-stack wedding planning platform using Next.js and Neon serverless PostgreSQL, deployed on Vercel. Features interactive budget tracking, real-time checklists, and guest RSVP management.',
+      tech: ['Next.js', 'Neon Postgres', 'Vercel', 'React'],
+      type: 'Independent Side Project',
+      featured: true
+    },
+    {
       title: 'Secure IT Monitoring Dashboard System',
       description: 'Designed and built a real-time dashboard system for monitoring IT infrastructure with a focus on cybersecurity metrics. Integrated basic SIEM capabilities to display log events, user access, and security alerts.',
       tech: ['PHP', 'Laravel', 'MySQL', 'SIEM'],

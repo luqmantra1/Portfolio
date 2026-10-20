@@ -61,8 +61,8 @@ const PortfolioSkills = () => {
       description: 'Robust server-side logic, secure RESTful APIs, database design, and government-grade RBAC.',
       skills: [
         { name: 'PHP (Laravel & CodeIgniter)', level: 'Advanced' },
+        { name: 'MySQL & PostgreSQL (Neon)', level: 'Advanced' },
         { name: 'C# / ASP.NET', level: 'Proficient' },
-        { name: 'MySQL Database Architecture', level: 'Advanced' },
         { name: 'Role-Based Access Control (RBAC)', level: 'Enterprise' },
         { name: 'RESTful API Integration', level: 'Advanced' }
       ]
@@ -74,7 +74,7 @@ const PortfolioSkills = () => {
       colorClass: 'cyan',
       description: 'Fast, responsive, accessible web interfaces engineered with modern component frameworks.',
       skills: [
-        { name: 'React.js (SPA / Hooks)', level: 'Advanced' },
+        { name: 'Next.js & React (Full-Stack / SPA)', level: 'Advanced' },
         { name: 'TypeScript & JavaScript (ES6+)', level: 'Advanced' },
         { name: 'Astro (Fast Static & SSR)', level: 'Proficient' },
         { name: 'Responsive Mobile-First UI/UX', level: 'Advanced' },
@@ -89,10 +89,10 @@ const PortfolioSkills = () => {
       description: 'Container orchestration, CI/CD automation pipelines, and infrastructure-as-code.',
       skills: [
         { name: 'Docker Containerization', level: 'Proficient' },
+        { name: 'Vercel & Cloud Deployments', level: 'Advanced' },
         { name: 'Terraform (IaC)', level: 'Intermediate' },
         { name: 'GitHub Actions CI/CD', level: 'Proficient' },
-        { name: 'CompTIA Cloud+ Methodologies', level: 'Certified' },
-        { name: 'Git Workflow & Versioning', level: 'Advanced' }
+        { name: 'CompTIA Cloud+ Methodologies', level: 'Certified' }
       ]
     },
     {

@@ -4,6 +4,16 @@ import './Projects.css'
 const Projects = () => {
   const projects = [
     {
+      title: 'Majlis – Wedding Planner Platform',
+      description: 'Architected and built a modern full-stack wedding planning platform utilizing Next.js and Neon serverless PostgreSQL, deployed on Vercel. Features interactive budget tracking (Nikah & Sanding allocations), real-time checklist task management, guest RSVP monitoring, and digital invitation cards.',
+      tech: ['Next.js', 'Neon (PostgreSQL)', 'Vercel', 'React', 'Full-Stack'],
+      type: 'Independent Side Project',
+      featured: true,
+      live: null,
+      github: null,
+      image: '/wedding_planner.png'
+    },
+    {
       title: 'Soluna Ent Corporate Website',
       description: 'Directed the technical strategy and development for a startup venture, engineering a highly optimized, mobile-first company portal focused on cross-browser compatibility and rapid load times for maximum user engagement.',
       tech: ['Modern Web Frameworks', 'Frontend Optimization', 'HTML5 & CSS3', 'Mobile-First UI/UX'],
