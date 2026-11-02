@@ -4,6 +4,17 @@ import './Projects.css'
 const Projects = () => {
   const projects = [
     {
+      title: 'Pac-man Two-Tier Deployment: VM, Docker & Kubernetes',
+      description: 'Deployed a legacy Node.js 6 + MongoDB 3.4 stack across an Ubuntu 22.04 VM (systemd), Docker, and self-healing Kubernetes with persistent storage.',
+      tech: ['Linux', 'Docker', 'Kubernetes', 'Node.js', 'MongoDB', 'systemd'],
+      type: 'DevOps & Cloud Deployment',
+      featured: true,
+      live: null,
+      // TODO: Replace with write-up repository once created (Source app: https://github.com/virtuositydev/pacman)
+      github: null,
+      image: '/projects/pacman-k8s.png'
+    },
+    {
       title: 'Majlis – Wedding Planner Platform',
       description: 'Architected and built a modern full-stack wedding planning platform utilizing Next.js and Neon serverless PostgreSQL, deployed on Vercel. Features interactive budget tracking (Nikah & Sanding allocations), real-time checklist task management, guest RSVP monitoring, and digital invitation cards.',
       tech: ['Next.js', 'Neon (PostgreSQL)', 'Vercel', 'React', 'Full-Stack'],

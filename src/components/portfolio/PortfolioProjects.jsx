@@ -7,6 +7,20 @@ const PortfolioProjects = () => {
 
   const projects = [
     {
+      id: 'pacman-deployment',
+      title: 'Pac-man Two-Tier Deployment: VM, Docker & Kubernetes',
+      category: 'enterprise',
+      tag: 'DevOps & Kubernetes',
+      client: 'Technical Lab Challenge',
+      description: 'Deployed a legacy Node.js 6 + MongoDB 3.4 web app three ways: natively on an Ubuntu 22.04 VM with systemd, with Docker, and on Kubernetes. Solved version incompatibilities on a modern OS, kept services alive across logout and reboot, and verified self-healing and persistent storage on Kubernetes.',
+      image: '/projects/pacman-k8s.png',
+      tech: ['Linux', 'Ubuntu', 'Node.js', 'MongoDB', 'systemd', 'Docker', 'Kubernetes', 'DevOps'],
+      featured: true,
+      // TODO: Replace with write-up repository once created (Source app: https://github.com/virtuositydev/pacman)
+      github: null,
+      live: null
+    },
+    {
       id: 'majlis-wedding',
       title: 'Majlis – Wedding Planner Platform',
       category: 'web',
