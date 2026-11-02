@@ -1,37 +1,52 @@
-import { FaServer, FaShieldAlt, FaDatabase, FaCode, FaCloud, FaRobot } from 'react-icons/fa'
+import { FaCode, FaLaptopCode, FaServer, FaShieldAlt, FaCloud, FaRobot } from 'react-icons/fa'
 import './Skills.css'
 
 const Skills = () => {
   const skillCategories = [
     {
-      category: 'Linux & Infrastructure',
+      category: 'Programming Languages',
+      icon: <FaCode />,
+      skills: ['Python', 'PHP', 'Java (foundational)', 'C#', 'JavaScript', 'TypeScript']
+    },
+    {
+      category: 'Frameworks & Libraries',
+      icon: <FaLaptopCode />,
+      skills: ['React.js', 'Next.js', 'Astro', 'Laravel', 'ASP.NET', 'Streamlit', 'YOLOv8', 'PyTorch']
+    },
+    {
+      category: 'Database & Infrastructure',
       icon: <FaServer />,
-      skills: ['Linux Server Administration', 'JumpServer', 'Server Hardening', 'Bash Scripting', 'PDN Healthcare Deployments']
+      skills: ['MySQL', 'PostgreSQL (Neon)', 'Linux (Ubuntu/SLES/AlmaLinux)', 'Git', 'AWS (Cloud Practitioner completed)', 'RESTful API Integration']
+    },
+    {
+      category: 'Cloud, Containers & DevOps',
+      icon: <FaCloud />,
+      skills: ['Kubernetes (LFS158/LFS157)', 'Docker Containerization', 'CompTIA Cloud+', 'Serverless', 'Terraform (IaC)', 'GitHub Actions']
+    },
+    {
+      category: 'Concepts & Security',
+      icon: <FaShieldAlt />,
+      skills: [
+        'Secure Software Development',
+        'Role-Based Access Control (RBAC)',
+        'Authentication & Authorization (OAuth 2.0 / OIDC)',
+        'Active Directory & LDAP (Okta)',
+        'Single Page Applications (SPA)',
+        'Object-Oriented Programming (OOP)',
+        'Client-Side Algorithms'
+      ]
     },
     {
       category: 'Enterprise Security & Monitoring',
-      icon: <FaShieldAlt />,
-      skills: ['ESET Endpoint & Server Security', 'Checkmk Monitoring', 'Kaspersky Operations (RTM)', 'SIEM Tools', 'Burp Suite', 'Secure Software Development']
-    },
-    {
-      category: 'Backend Engineering',
-      icon: <FaDatabase />,
-      skills: ['PHP', 'Laravel', 'CodeIgniter', 'C#', 'ASP.NET', 'MySQL', 'RESTful APIs', 'Role-Based Access Control (RBAC)']
-    },
-    {
-      category: 'Frontend & Web Development',
-      icon: <FaCode />,
-      skills: ['React.js', 'TypeScript', 'JavaScript (ES6+)', 'Astro', 'Single Page Applications (SPA)', 'HTML5 & CSS3', 'Responsive UI/UX', 'Client-Side Algorithms']
-    },
-    {
-      category: 'DevOps & Cloud',
-      icon: <FaCloud />,
-      skills: ['Docker', 'Terraform (IaC)', 'GitHub Actions CI/CD', 'CompTIA Cloud+', 'Git']
-    },
-    {
-      category: 'AI / Machine Learning',
       icon: <FaRobot />,
-      skills: ['Python', 'YOLOv8 Object Detection', 'PyTorch', 'Streamlit', 'Computer Vision']
+      skills: [
+        'Checkmk 24/7 Monitoring',
+        'ESET Endpoint & Server Security',
+        'Kaspersky Security Operations (RTM)',
+        'SSH Hardening & MOK Kernel Signing',
+        'SIEM Operations',
+        'Computer Vision & Data Pipelines'
+      ]
     }
   ]
 

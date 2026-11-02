@@ -151,8 +151,8 @@ const PortfolioHero = () => {
               </div>
               <div className="metric-divider"></div>
               <div className="metric-box">
-                <span className="metric-number">3x</span>
-                <span className="metric-label">Certified (CCNA, Cloud+, ESET)</span>
+                <span className="metric-number">14x</span>
+                <span className="metric-label">Verified Badges & Certifications</span>
               </div>
             </div>
 
@@ -179,7 +179,7 @@ const PortfolioHero = () => {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://www.credly.com/users/luqman-tra/badges/credly"
+                  href="https://www.credly.com/users/luqman-tra"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-btn"

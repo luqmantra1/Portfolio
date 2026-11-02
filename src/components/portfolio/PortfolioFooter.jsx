@@ -39,7 +39,7 @@ const PortfolioFooter = () => {
             </p>
             <div className="footer-security-pill">
               <FaShieldAlt className="shield-icon" />
-              <span>Certified in CCNA, CompTIA Cloud+ & ESET Engineering</span>
+              <span>Certified in CompTIA Cloud+, CCNA & 14 Verified Credly Badges</span>
             </div>
           </div>
 
@@ -80,7 +80,7 @@ const PortfolioFooter = () => {
                 <FaLinkedin /> <span>LinkedIn</span>
               </a>
               <a
-                href="https://www.credly.com/users/luqman-tra/badges/credly"
+                href="https://www.credly.com/users/luqman-tra"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-btn"

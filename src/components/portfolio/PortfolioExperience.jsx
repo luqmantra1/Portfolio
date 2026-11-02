@@ -55,7 +55,7 @@ const PortfolioExperience = () => {
     },
     {
       id: 'beyond2u',
-      title: 'System Engineer (Enterprise Support)',
+      title: 'System Engineer Intern (Enterprise Support)',
       company: 'Beyond2u',
       location: 'Cheras, Malaysia',
       period: 'May 2025 - Oct 2025',
@@ -63,12 +63,12 @@ const PortfolioExperience = () => {
       category: 'enterprise',
       isCurrent: false,
       icon: <FaServer />,
-      summary: 'Enterprise field and systems IT support for major commercial accounts including McDonald\'s Malaysia, Tan Chong Motor, and Sunway Construction.',
+      summary: 'Provided enterprise technical support for networking, servers, hardware, and client systems, including McDonald\'s Malaysia, Tan Chong Motor, and Sunway Construction.',
       achievements: [
-        'Executed critical POS migrations and server upgrades for McDonald\'s new store openings.',
-        'Performed hardware/software installation and network configuration for major corporate clients.',
-        'Conducted system diagnostics and preventive maintenance in high-pressure, client-facing environments.',
-        'Collaborated with senior infrastructure engineers on scheduled preventive maintenance and enterprise client coordination.'
+        'Provided L1 and L2 technical support for networking, servers, hardware, and systems, troubleshooting and resolving incidents and escalating complex issues.',
+        'Supported McDonald\'s POS system migrations and server upgrades for new store openings in the Klang Valley, including configuration and go-live support.',
+        'Installed and configured hardware, software, and network settings for corporate clients, and tested connectivity before handover.',
+        'Performed system diagnostics and preventive maintenance in client-facing environments to keep systems stable and minimise disruption.'
       ],
       skills: ['McDonald\'s Malaysia Support', 'POS Systems', 'Network Configuration', 'Hardware Troubleshooting', 'Preventive Maintenance']
     },
@@ -139,8 +139,8 @@ const PortfolioExperience = () => {
       icon: <FaCode />,
       summary: 'Built production computer vision pipeline for automated aquaculture classification.',
       achievements: [
-        'Developed a Python/Streamlit Computer Vision model using YOLOv8 for aquaculture classification, achieving 85% classification accuracy.',
-        'Cut manual laboratory inspection labor by approximately 25% through machine learning automation.',
+        'Built a data preparation pipeline in Python to clean, label, and format approximately 15,000–20,000 images for YOLOv8 model training, including train/validation/test splitting.',
+        'Developed a Python/Streamlit Computer Vision model using YOLOv8 for aquaculture classification, achieving 85% classification accuracy and cutting manual inspection by 25%.',
         'Built a lightweight, intuitive interactive dashboard allowing non-technical aquaculture farm operators to run instant batch detections.'
       ],
       skills: ['Python', 'YOLOv8', 'PyTorch', 'Streamlit', 'Computer Vision', 'Automation']

@@ -7,7 +7,7 @@ const Education = () => {
       degree: 'Bachelor of IT (Honours) in Cyber Security',
       major: 'Relevant Coursework: Secure Software Development, IT Infrastructure Monitoring, Network Security, Information Assurance, and SIEM Operations',
       institution: 'Universiti Poly-Tech Malaysia (UPTM)',
-      period: '2023 - 2025',
+      period: 'Apr 2023 – Dec 2025',
       cgpa: '3.62 CGPA',
       achievements: [
         'Secure Software Development, IT Infrastructure Monitoring, Network Security & SIEM Operations',
@@ -18,8 +18,8 @@ const Education = () => {
     {
       degree: 'Diploma in Computer Science',
       major: 'Relevant Coursework: Web Application Development, Database Management (MySQL), Object-Oriented Programming, and E-Commerce Systems',
-      institution: 'Kolej University Poly-Tech MARA (KUPTM)',
-      period: '2020 - 2022',
+      institution: 'Kolej Universiti Poly-Tech MARA (KUPTM)',
+      period: 'July 2020 - Dec 2022',
       cgpa: '3.59 CGPA',
       achievements: [
         'Web Application Development, Database Management (MySQL) & E-Commerce Systems',
@@ -30,22 +30,46 @@ const Education = () => {
 
   const certifications = [
     {
-      name: 'Full Stack Web Development',
-      issuer: 'Amazon',
-      image: '/amazon-fullstack.jpeg',
-      verifyUrl: 'https://coursera.org/share/351186393fab306103e71783d48cb980'
+      name: 'CompTIA Cloud+ ce Certification',
+      issuer: 'CompTIA',
+      image: '/cloud+.png',
+      verifyUrl: 'https://www.credly.com/badges/6e91a322-ec84-44b9-a1ed-15d12d0b8ab3/public_url'
     },
     {
       name: 'CCNA: Switching, Routing, and Wireless Essentials',
       issuer: 'Cisco',
       image: '/ccna.png',
-      verifyUrl: 'https://www.credly.com/badges/3b8ce121-300d-46f0-8a51-a8a6b0dde35b/public_url' 
+      verifyUrl: 'https://www.credly.com/badges/3b8ce121-300d-46f0-8a51-a8a6b0dde35b/public_url'
     },
     {
-      name: 'CompTIA Cloud+',
-      issuer: 'CompTIA',
-      image: '/cloud+.png',
-      verifyUrl: 'https://www.credly.com/badges/6e91a322-ec84-44b9-a1ed-15d12d0b8ab3/public_url' 
+      name: 'LFS158: Introduction to Kubernetes',
+      issuer: 'The Linux Foundation',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'LFS157: Introduction to Serverless on Kubernetes',
+      issuer: 'The Linux Foundation',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'LFS101: Introduction to Linux',
+      issuer: 'The Linux Foundation',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'LFEL1004: Authentication & Authorization for Web/API',
+      issuer: 'The Linux Foundation',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'Integrate with Active Directory',
+      issuer: 'Okta',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'AWS Educate Introduction to Cloud 101',
+      issuer: 'Amazon Web Services',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
       name: 'ESET Certified Engineer',
@@ -54,10 +78,31 @@ const Education = () => {
       verifyUrl: null
     },
     {
-      name: 'Credly Profile & Digital Badges',
+      name: 'Full Stack Web Development',
+      issuer: 'Amazon',
+      image: '/amazon-fullstack.jpeg',
+      verifyUrl: 'https://coursera.org/share/351186393fab306103e71783d48cb980'
+    },
+    {
+      name: 'LFS184: Introduction to JavaScript Security',
+      issuer: 'The Linux Foundation',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'LFC108: Cybersecurity Essentials',
+      issuer: 'The Linux Foundation',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'Cisco Endpoint Security & Cyber Defense',
+      issuer: 'Cisco',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'Credly Official Transcript (14 Verified Badges)',
       issuer: 'Credly Verified',
       image: '/Credly.png',
-      verifyUrl: 'https://www.credly.com/users/luqman-tra/badges/credly'
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
     }
   ]
 
@@ -106,7 +151,7 @@ const Education = () => {
       {/* Certifications Section */}
       <div className="certifications-section">
         <h3 className="certifications-title">
-          <FaAward className="award-icon" /> Industry Certifications
+          <FaAward className="award-icon" /> Industry Certifications & Credly Badges
         </h3>
         
         <div className="certifications-grid-resume">

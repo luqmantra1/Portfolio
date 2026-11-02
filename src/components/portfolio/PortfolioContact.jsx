@@ -89,7 +89,7 @@ const PortfolioContact = () => {
                 </div>
                 <div className="channel-info">
                   <span className="channel-label">Location</span>
-                  <span className="channel-value">Kuala Lumpur, Malaysia</span>
+                  <span className="channel-value">Ampang, Selangor, Malaysia</span>
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@ const PortfolioContact = () => {
                   <FaGithub /> GitHub
                 </a>
                 <a
-                  href="https://www.credly.com/users/luqman-tra/badges/credly"
+                  href="https://www.credly.com/users/luqman-tra"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="profile-link-btn"

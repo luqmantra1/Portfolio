@@ -86,11 +86,11 @@ const PortfolioAbout = () => {
               </div>
               <div className="fact-item">
                 <FaCheckCircle className="fact-check" />
-                <span><strong>Certifications:</strong> Amazon Full Stack, Cisco CCNA, CompTIA Cloud+, ESET Certified</span>
+                <span><strong>Certifications:</strong> CompTIA Cloud+, Cisco CCNA, Kubernetes, AWS, ESET, Linux Foundation (14+ Credly Badges)</span>
               </div>
               <div className="fact-item">
                 <FaCheckCircle className="fact-check" />
-                <span><strong>Core Languages:</strong> Python, PHP (Laravel), JavaScript & TypeScript (React), C#, Bash, SQL</span>
+                <span><strong>Core Languages:</strong> Python, PHP (Laravel), Java (Foundational), JavaScript & TypeScript, C#, Bash, SQL</span>
               </div>
             </div>
           </div>
@@ -111,8 +111,8 @@ const PortfolioAbout = () => {
                 <FaShieldAlt />
               </div>
               <div className="stat-data">
-                <span className="stat-big-num">3x Certified</span>
-                <span className="stat-desc">Cisco CCNA, CompTIA Cloud+, ESET Engineer</span>
+                <span className="stat-big-num">14x Verified</span>
+                <span className="stat-desc">CompTIA Cloud+, CCNA, Kubernetes & Credly Transcript</span>
               </div>
             </div>
 

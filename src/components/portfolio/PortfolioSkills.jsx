@@ -49,8 +49,9 @@ const PortfolioSkills = () => {
         { name: 'ESET Endpoint & Server Security', level: 'Certified' },
         { name: 'Checkmk 24/7 Monitoring', level: 'Advanced' },
         { name: 'Kaspersky Security Ops (RTM)', level: 'Production' },
-        { name: 'SIEM Tools & Log Auditing', level: 'Proficient' },
-        { name: 'Burp Suite & Vulnerability Tests', level: 'Proficient' }
+        { name: 'Active Directory & Okta Identity', level: 'Proficient' },
+        { name: 'OAuth 2.0 / OpenID Connect', level: 'Proficient' },
+        { name: 'SIEM Tools & Log Auditing', level: 'Proficient' }
       ]
     },
     {
@@ -63,6 +64,7 @@ const PortfolioSkills = () => {
         { name: 'PHP (Laravel & CodeIgniter)', level: 'Advanced' },
         { name: 'MySQL & PostgreSQL (Neon)', level: 'Advanced' },
         { name: 'C# / ASP.NET', level: 'Proficient' },
+        { name: 'Core Java (Foundational)', level: 'Foundational' },
         { name: 'Role-Based Access Control (RBAC)', level: 'Enterprise' },
         { name: 'RESTful API Integration', level: 'Advanced' }
       ]
@@ -88,11 +90,12 @@ const PortfolioSkills = () => {
       colorClass: 'blue',
       description: 'Container orchestration, CI/CD automation pipelines, and infrastructure-as-code.',
       skills: [
+        { name: 'Kubernetes (LFS158/LFS157)', level: 'Verified' },
         { name: 'Docker Containerization', level: 'Proficient' },
+        { name: 'AWS Cloud Infrastructure', level: 'Proficient' },
+        { name: 'CompTIA Cloud+ Methodologies', level: 'Certified' },
         { name: 'Vercel & Cloud Deployments', level: 'Advanced' },
-        { name: 'Terraform (IaC)', level: 'Intermediate' },
-        { name: 'GitHub Actions CI/CD', level: 'Proficient' },
-        { name: 'CompTIA Cloud+ Methodologies', level: 'Certified' }
+        { name: 'Terraform & GitHub Actions', level: 'Proficient' }
       ]
     },
     {

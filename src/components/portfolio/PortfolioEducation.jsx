@@ -4,10 +4,10 @@ import './PortfolioEducation.css'
 const PortfolioEducation = () => {
   const educationList = [
     {
-      degree: 'Bachelor of Information Technology (Honours)',
+      degree: 'Bachelor of IT (Honours) in Cyber Security',
       major: 'Major in Cyber Security',
       institution: 'Universiti Poly-Tech Malaysia (UPTM)',
-      period: '2023 - 2025',
+      period: 'Apr 2023 – Dec 2025',
       cgpa: '3.62 CGPA (Honours)',
       highlights: [
         'Relevant Coursework: Secure Software Development, IT Infrastructure Monitoring, Network Security, Information Assurance, and SIEM Operations',
@@ -17,8 +17,8 @@ const PortfolioEducation = () => {
     },
     {
       degree: 'Diploma in Computer Science',
-      institution: 'Kolej University Poly-Tech MARA (KUPTM)',
-      period: '2020 - 2022',
+      institution: 'Kolej Universiti Poly-Tech MARA (KUPTM)',
+      period: 'July 2020 - Dec 2022',
       cgpa: '3.59 CGPA',
       highlights: [
         'Relevant Coursework: Web Application Development, Database Management (MySQL), Object-Oriented Programming, and E-Commerce Systems',
@@ -30,12 +30,12 @@ const PortfolioEducation = () => {
 
   const certifications = [
     {
-      name: 'Full Stack Web Development',
-      issuer: 'Amazon',
-      image: '/amazon-fullstack.jpeg',
-      badgeCategory: 'Cloud & Full-Stack Engineering',
-      verifyUrl: 'https://coursera.org/share/351186393fab306103e71783d48cb980',
-      description: 'Comprehensive full-stack web architecture, modern frontend frameworks, cloud-native backend services, and scalable web deployment backed by Amazon.'
+      name: 'CompTIA Cloud+ ce Certification',
+      issuer: 'CompTIA',
+      image: '/cloud+.png',
+      badgeCategory: 'Cloud Architecture & DevOps',
+      verifyUrl: 'https://www.credly.com/badges/6e91a322-ec84-44b9-a1ed-15d12d0b8ab3/public_url',
+      description: 'Vendor-neutral enterprise cloud architecture, automated deployment, cloud security, and infrastructure optimization (Valid Dec 2025 - Dec 2028).'
     },
     {
       name: 'CCNA: Switching, Routing, and Wireless Essentials',
@@ -46,12 +46,46 @@ const PortfolioEducation = () => {
       description: 'Enterprise networking architecture, IP addressing, switching protocols, WLAN security, and router configuration.'
     },
     {
-      name: 'CompTIA Cloud+',
-      issuer: 'CompTIA',
-      image: '/cloud+.png',
-      badgeCategory: 'Cloud Architecture & DevOps',
-      verifyUrl: 'https://www.credly.com/badges/6e91a322-ec84-44b9-a1ed-15d12d0b8ab3/public_url',
-      description: 'Vendor-neutral enterprise cloud architecture, automated deployment, cloud security, and infrastructure optimization.'
+      name: 'LFS158: Introduction to Kubernetes',
+      issuer: 'The Linux Foundation',
+      badgeCategory: 'Cloud Native & Containers',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Container orchestration, Kubernetes cluster administration, microservices deployment, volume management, and network services.'
+    },
+    {
+      name: 'LFS157: Introduction to Serverless on Kubernetes',
+      issuer: 'The Linux Foundation',
+      badgeCategory: 'Cloud Native & Serverless',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Deploying serverless functions across Kubernetes and Docker with OpenFaaS, secret management, auto-scaling, and TLS.'
+    },
+    {
+      name: 'LFS101: Introduction to Linux',
+      issuer: 'The Linux Foundation',
+      badgeCategory: 'Systems & OS Administration',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Advanced Linux systems administration across major distros, shell scripting, system startup, and root access security.'
+    },
+    {
+      name: 'LFEL1004: Authentication & Authorization for Web/API',
+      issuer: 'The Linux Foundation',
+      badgeCategory: 'Web & API Security',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'OAuth 2.0 / OpenID Connect, Single Sign-On (SSO), Role-Based Access Control (RBAC), and token-based least-privilege security.'
+    },
+    {
+      name: 'Integrate with Active Directory',
+      issuer: 'Okta',
+      badgeCategory: 'Identity & Access Management',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Okta AD agent architecture, LDAP directory integrations, Just-In-Time (JIT) provisioning, and secure user synchronization.'
+    },
+    {
+      name: 'AWS Educate Introduction to Cloud 101',
+      issuer: 'Amazon Web Services',
+      badgeCategory: 'Cloud Computing',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Fundamental AWS cloud architecture, virtual labs, core infrastructure services, and cloud computing principles.'
     },
     {
       name: 'ESET Certified Engineer',
@@ -62,12 +96,41 @@ const PortfolioEducation = () => {
       description: 'Deployment, policy orchestration, and threat mitigation for ESET Endpoint Protection and Server Security suites.'
     },
     {
-      name: 'Credly Certified Professional Profile',
+      name: 'Full Stack Web Development',
+      issuer: 'Amazon',
+      image: '/amazon-fullstack.jpeg',
+      badgeCategory: 'Cloud & Full-Stack Engineering',
+      verifyUrl: 'https://coursera.org/share/351186393fab306103e71783d48cb980',
+      description: 'Comprehensive full-stack web architecture, modern frontend frameworks, cloud-native backend services, and scalable web deployment backed by Amazon.'
+    },
+    {
+      name: 'LFS184: Introduction to JavaScript Security',
+      issuer: 'The Linux Foundation',
+      badgeCategory: 'Application Security',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Defensive web security, application flaw audits, Same-Origin Policy, secure cookies, and protection against XSS and CSRF.'
+    },
+    {
+      name: 'LFC108: Cybersecurity Essentials',
+      issuer: 'The Linux Foundation',
+      badgeCategory: 'Information Security',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Enterprise security practices, data breach mitigation, confidential information protection, and threat defense protocols.'
+    },
+    {
+      name: 'Cisco Endpoint Security & Cyber Defense',
+      issuer: 'Cisco',
+      badgeCategory: 'Network Security',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Endpoint security architecture, network security fundamentals, cyber threat analysis, and hardware troubleshooting basics.'
+    },
+    {
+      name: 'Credly Official Verified Transcript (14 Badges)',
       issuer: 'Credly Verified',
       image: '/Credly.png',
-      badgeCategory: 'Digital Badges & Verification',
-      verifyUrl: 'https://www.credly.com/users/luqman-tra/badges/credly',
-      description: 'Publicly authenticated credentials, digital badge transcripts, and verified industry competencies.'
+      badgeCategory: 'Official Transcript & Badges',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Pearson Credly authenticated digital transcript issued on 26 July 2026 containing all 14 official verified credentials.'
     }
   ]
 
@@ -135,7 +198,7 @@ const PortfolioEducation = () => {
             </div>
           </div>
           <a 
-            href="https://www.credly.com/users/luqman-tra/badges/credly" 
+            href="https://www.credly.com/users/luqman-tra" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn btn-outline-glow view-all-credly-btn"

@@ -34,7 +34,7 @@ const Profile = () => {
 
           <div className="resume-location-badge">
             <FaMapMarkerAlt className="loc-icon" />
-            <span>Kuala Lumpur, Malaysia</span>
+            <span>Ampang, Selangor, Malaysia</span>
           </div>
 
           {/* Languages Row */}
@@ -43,9 +43,9 @@ const Profile = () => {
               <FaGlobe className="globe-icon" /> Languages:
             </span>
             <div className="lang-pills">
-              <span className="lang-pill"><strong>Malay</strong> (Native)</span>
-              <span className="lang-pill"><strong>English</strong> (Professional)</span>
-              <span className="lang-pill"><strong>Mandarin</strong> (Basic)</span>
+              <span className="lang-pill"><strong>Bahasa Malaysia</strong> (Native)</span>
+              <span className="lang-pill"><strong>English</strong> (Professional Working Proficiency)</span>
+              <span className="lang-pill"><strong>Mandarin</strong> (Basic Conversational)</span>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ const Profile = () => {
         </a>
 
         <a
-          href="https://www.credly.com/users/luqman-tra/badges/credly"
+          href="https://www.credly.com/users/luqman-tra"
           target="_blank"
           rel="noopener noreferrer"
           className="contact-card-item"

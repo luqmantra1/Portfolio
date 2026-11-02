@@ -17,14 +17,14 @@ const Experience = () => {
     },
     {
       title: 'Freelance Full Stack Developer',
-      company: 'Various Clients (SBM, Mizuma Co.Ltd, HGG Enterprise)',
+      company: 'Various Clients (SBM, Mizuma Co. Ltd, HGG Enterprise)',
       location: 'Kuala Lumpur, Malaysia',
       period: 'Nov 2023 - Mar 2026',
       type: 'Freelance',
       achievements: [
-        'Developed a Python/Streamlit Computer Vision model for aquaculture, achieving 85% classification accuracy.',
-        'Built an RBAC enabled data portal using PHP and Laravel to replace manual record-keeping with secure digital access.',
-        'Deployed the sepakatgroup.com corporate portal integrating multilingual support and a custom contact management system.'
+        'Built a data preparation pipeline in Python to clean, label, and format approximately 15,000–20,000 images for YOLOv8 model training, including train/validation/test splitting.',
+        'Built a role-based access control (RBAC) data portal in PHP and Laravel, with separate user roles and permissions to restrict access to sensitive records, replacing manual record-keeping with secure digital access.',
+        'Developed and deployed the sepakatgroup.com corporate website, with multilingual support and a custom contact management system that stores and organises customer enquiries.'
       ]
     },
     {
@@ -46,9 +46,10 @@ const Experience = () => {
       period: 'May 2025 - Oct 2025',
       type: 'Internship',
       achievements: [
-        'Executed critical POS migrations and server upgrades for McDonald\'s new store openings.',
-        'Performed hardware/software installation and network configuration for major corporate clients.',
-        'Conducted system diagnostics and preventive maintenance in high-pressure, client-facing environments.'
+        'Provided L1 and L2 technical support for networking, servers, hardware, and systems, troubleshooting and resolving incidents and escalating complex issues.',
+        'Supported McDonald\'s POS system migrations and server upgrades for new store openings in the Klang Valley, including configuration and go-live support.',
+        'Installed and configured hardware, software, and network settings for corporate clients, and tested connectivity before handover.',
+        'Performed system diagnostics and preventive maintenance in client-facing environments to keep systems stable and minimise disruption.'
       ]
     },
     {
