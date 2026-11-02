@@ -48,6 +48,7 @@ const PortfolioEducation = () => {
     {
       name: 'LFS158: Introduction to Kubernetes',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfs158-kubernetes.png',
       badgeCategory: 'Cloud Native & Containers',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
       description: 'Container orchestration, Kubernetes cluster administration, microservices deployment, volume management, and network services.'
@@ -55,6 +56,7 @@ const PortfolioEducation = () => {
     {
       name: 'LFS157: Introduction to Serverless on Kubernetes',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfs157-serverless-k8s.png',
       badgeCategory: 'Cloud Native & Serverless',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
       description: 'Deploying serverless functions across Kubernetes and Docker with OpenFaaS, secret management, auto-scaling, and TLS.'
@@ -62,6 +64,7 @@ const PortfolioEducation = () => {
     {
       name: 'LFS101: Introduction to Linux',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfs101-linux.png',
       badgeCategory: 'Systems & OS Administration',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
       description: 'Advanced Linux systems administration across major distros, shell scripting, system startup, and root access security.'
@@ -69,6 +72,7 @@ const PortfolioEducation = () => {
     {
       name: 'LFEL1004: Authentication & Authorization for Web/API',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfel1004-auth.png',
       badgeCategory: 'Web & API Security',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
       description: 'OAuth 2.0 / OpenID Connect, Single Sign-On (SSO), Role-Based Access Control (RBAC), and token-based least-privilege security.'
@@ -76,6 +80,7 @@ const PortfolioEducation = () => {
     {
       name: 'Integrate with Active Directory',
       issuer: 'Okta',
+      image: '/certs/okta-active-directory.png',
       badgeCategory: 'Identity & Access Management',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
       description: 'Okta AD agent architecture, LDAP directory integrations, Just-In-Time (JIT) provisioning, and secure user synchronization.'
@@ -83,6 +88,7 @@ const PortfolioEducation = () => {
     {
       name: 'AWS Educate Introduction to Cloud 101',
       issuer: 'Amazon Web Services',
+      image: '/certs/aws-educate-cloud101.png',
       badgeCategory: 'Cloud Computing',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
       description: 'Fundamental AWS cloud architecture, virtual labs, core infrastructure services, and cloud computing principles.'
@@ -106,6 +112,7 @@ const PortfolioEducation = () => {
     {
       name: 'LFS184: Introduction to JavaScript Security',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfs184-js-security.png',
       badgeCategory: 'Application Security',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
       description: 'Defensive web security, application flaw audits, Same-Origin Policy, secure cookies, and protection against XSS and CSRF.'
@@ -113,16 +120,42 @@ const PortfolioEducation = () => {
     {
       name: 'LFC108: Cybersecurity Essentials',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfc108-cybersecurity-essentials.png',
       badgeCategory: 'Information Security',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
       description: 'Enterprise security practices, data breach mitigation, confidential information protection, and threat defense protocols.'
     },
     {
-      name: 'Cisco Endpoint Security & Cyber Defense',
+      name: 'Endpoint Security',
       issuer: 'Cisco',
-      badgeCategory: 'Network Security',
+      image: '/certs/cisco-endpoint-security.png',
+      badgeCategory: 'Endpoint Security',
       verifyUrl: 'https://www.credly.com/users/luqman-tra',
-      description: 'Endpoint security architecture, network security fundamentals, cyber threat analysis, and hardware troubleshooting basics.'
+      description: 'Endpoint security architecture, network security fundamentals, cyber threat analysis, and operating systems defense.'
+    },
+    {
+      name: 'Introduction to Cybersecurity',
+      issuer: 'Cisco',
+      image: '/certs/cisco-intro-cybersecurity.png',
+      badgeCategory: 'Cyber Threat Defense',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Global implications of cyber threats on industries, threat detection, defense architectures, and vulnerability countermeasures.'
+    },
+    {
+      name: 'Computer Hardware Basics',
+      issuer: 'Cisco',
+      image: '/certs/cisco-hardware-basics.png',
+      badgeCategory: 'Computer Hardware',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Component architecture, PC and mobile hardware diagnostics, installation, repair, and foundational troubleshooting.'
+    },
+    {
+      name: 'IT Customer Support Basics',
+      issuer: 'Cisco',
+      image: '/certs/cisco-customer-support.png',
+      badgeCategory: 'IT Support & Operations',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra',
+      description: 'Foundational help desk operations, remote troubleshooting, technical communication, and user support tools.'
     },
     {
       name: 'Credly Official Verified Transcript (14 Badges)',

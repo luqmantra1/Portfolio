@@ -44,31 +44,37 @@ const Education = () => {
     {
       name: 'LFS158: Introduction to Kubernetes',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfs158-kubernetes.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
       name: 'LFS157: Introduction to Serverless on Kubernetes',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfs157-serverless-k8s.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
       name: 'LFS101: Introduction to Linux',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfs101-linux.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
       name: 'LFEL1004: Authentication & Authorization for Web/API',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfel1004-auth.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
       name: 'Integrate with Active Directory',
       issuer: 'Okta',
+      image: '/certs/okta-active-directory.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
       name: 'AWS Educate Introduction to Cloud 101',
       issuer: 'Amazon Web Services',
+      image: '/certs/aws-educate-cloud101.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
@@ -86,16 +92,37 @@ const Education = () => {
     {
       name: 'LFS184: Introduction to JavaScript Security',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfs184-js-security.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
       name: 'LFC108: Cybersecurity Essentials',
       issuer: 'The Linux Foundation',
+      image: '/certs/lfc108-cybersecurity-essentials.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
-      name: 'Cisco Endpoint Security & Cyber Defense',
+      name: 'Endpoint Security',
       issuer: 'Cisco',
+      image: '/certs/cisco-endpoint-security.png',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'Introduction to Cybersecurity',
+      issuer: 'Cisco',
+      image: '/certs/cisco-intro-cybersecurity.png',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'Computer Hardware Basics',
+      issuer: 'Cisco',
+      image: '/certs/cisco-hardware-basics.png',
+      verifyUrl: 'https://www.credly.com/users/luqman-tra'
+    },
+    {
+      name: 'IT Customer Support Basics',
+      issuer: 'Cisco',
+      image: '/certs/cisco-customer-support.png',
       verifyUrl: 'https://www.credly.com/users/luqman-tra'
     },
     {
